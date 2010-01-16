@@ -18,3 +18,5 @@ News.create(:body => 'Tato novinka nema nadpis', :valid_from => ('January 16, 20
 News.create(:header => '', :body => 'Tato novinka ma prazdny nadpis', :valid_from => ('January 16, 2010'))
 
 roxy = Club.create(:name => 'Roxy', :www => 'www.roxy.cz', :phone => '+420 123 456 789', :address => 'Dlouhá 10, Praha, 110 00', :email => 'info@roxy.cz', :info => 'trochu techno, ale v pohode..')
+
+Concert.create(:name => 'Koncert na podporu Petra', :price => '100.00', :info => 'Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?', :club_id => roxy.id)
