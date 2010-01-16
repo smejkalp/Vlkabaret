@@ -15,4 +15,6 @@ News.create(:header => 'Spuštění stránek', :body => 'Byla vytvořena první 
 News.create(:header => 'Testovací novinka 1', :body => 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', :valid_from => ('January 16, 2010'), :valid_until => ('January 17,2010'))
 News.create(:header => 'Testovací novinka 2', :body => 'Tato novinka by se mela zobrazovat od 17.1.2010', :valid_from => ('January 17, 2010'))
 News.create(:body => 'Tato novinka nema nadpis', :valid_from => ('January 16, 2010'))
-News.create(:body => 'Tato novinka ma prazdny nadpis', :valid_from => ('January 16, 2010'))
+News.create(:header => '', :body => 'Tato novinka ma prazdny nadpis', :valid_from => ('January 16, 2010'))
+
+roxy = Club.create(:name => 'Roxy', :www => 'www.roxy.cz', :phone => '+420 123 456 789', :address => 'Dlouhá 10, Praha, 110 00', :email => 'info@roxy.cz', :info => 'trochu techno, ale v pohode..')

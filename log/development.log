@@ -327,3 +327,208 @@ Migrating to CreateNews (20100116120006)
   [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
   [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:19:46', 'Tato novinka ma prazdny nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:19:46')[0m
   [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `news`[0m
+  [4;36;1mSQL (115.0ms)[0m   [0;1mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `roles`[0m
+  [4;35;1mSQL (225.8ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE `users`[0m
+  [4;36;1mSQL (134.1ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `news`[0m
+  [4;36;1mSQL (86.7ms)[0m   [0;1mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE `roles`[0m
+  [4;35;1mSQL (115.5ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `users`[0m
+  [4;36;1mSQL (93.4ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `news`[0m
+  [4;36;1mSQL (75.1ms)[0m   [0;1mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `roles`[0m
+  [4;35;1mSQL (148.9ms)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mDROP TABLE `users`[0m
+  [4;36;1mSQL (102.8ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mRole Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.3ms)[0m   [0mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('návštěvník', '2010-01-16 12:30:07', '2010-01-16 12:30:07')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.2ms)[0m   [0;1mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('administrátor', '2010-01-16 12:30:07', '2010-01-16 12:30:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.3ms)[0m   [0;1mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Novák', '2010-01-16 12:30:07', 'Takovej blbec no... nic moc jako, spis ho tak trpime...', 2, 'Marek', 'vlk', 'smradozadek', 'anoha@seznam.cz', '2010-01-16 12:30:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Smejkal', '2010-01-16 12:30:07', 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', 1, 'Petr', 'petr', 'vonavozadek', 'xmejkal@gmail.com', '2010-01-16 12:30:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mNews Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.3ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:07', 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', 'Spuštění stránek', '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:07')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:07', 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', 'Testovací novinka 1', '2010-01-16 00:00:00', '2010-01-17 00:00:00', '2010-01-16 12:30:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:07', 'Tato novinka by se mela zobrazovat od 17.1.2010', 'Testovací novinka 2', '2010-01-17 00:00:00', NULL, '2010-01-16 12:30:07')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:07', 'Tato novinka nema nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:07')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:07', 'Tato novinka ma prazdny nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:07')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mClub Columns (0.0ms)[0m   [0mMysql::Error: Table 'vlkabaret_development.clubs' doesn't exist: SHOW FIELDS FROM `clubs`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (60.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (103.2ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100116111840)
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (74.3ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100116111840')[0m
+Migrating to CreateRoles (20100116114024)
+  [4;36;1mSQL (87.9ms)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100116114024')[0m
+Migrating to CreateNews (20100116120006)
+  [4;36;1mSQL (83.6ms)[0m   [0;1mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100116120006')[0m
+Migrating to CreateClubs (20100116122148)
+  [4;36;1mSQL (82.8ms)[0m   [0;1mCREATE TABLE `clubs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `www` varchar(255), `phone` varchar(255), `email` varchar(255), `address` text, `info` text, `map_link` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100116122148')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `clubs`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mSHOW KEYS FROM `clubs`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `news`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `news`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mDROP TABLE `clubs`[0m
+  [4;36;1mSQL (180.2ms)[0m   [0;1mCREATE TABLE `clubs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `www` varchar(255), `phone` varchar(255), `email` varchar(255), `address` text, `info` text, `map_link` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE `news`[0m
+  [4;35;1mSQL (71.9ms)[0m   [0mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (106.3ms)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (103.8ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mRole Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.3ms)[0m   [0;1mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('návštěvník', '2010-01-16 12:30:55', '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.2ms)[0m   [0mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('administrátor', '2010-01-16 12:30:55', '2010-01-16 12:30:55')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Novák', '2010-01-16 12:30:55', 'Takovej blbec no... nic moc jako, spis ho tak trpime...', 2, 'Marek', 'vlk', 'smradozadek', 'anoha@seznam.cz', '2010-01-16 12:30:55')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Smejkal', '2010-01-16 12:30:55', 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', 1, 'Petr', 'petr', 'vonavozadek', 'xmejkal@gmail.com', '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNews Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.3ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:55', 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', 'Spuštění stránek', '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:55', 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', 'Testovací novinka 1', '2010-01-16 00:00:00', '2010-01-17 00:00:00', '2010-01-16 12:30:55')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:55', 'Tato novinka by se mela zobrazovat od 17.1.2010', 'Testovací novinka 2', '2010-01-17 00:00:00', NULL, '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:55', 'Tato novinka nema nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:55')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:30:55', 'Tato novinka ma prazdny nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mClub Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mClub Create (0.3ms)[0m   [0;1mINSERT INTO `clubs` (`name`, `www`, `updated_at`, `info`, `phone`, `map_link`, `address`, `email`, `created_at`) VALUES('Roxy', 'www.roxy.cz', '2010-01-16 12:30:55', 'trochu techno, ale v pohode..', '+420 123 456 789', NULL, 'Dlouhá 10, Praha, 110 00', 'info@roxy.cz', '2010-01-16 12:30:55')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `clubs`[0m
+  [4;36;1mSQL (72.9ms)[0m   [0;1mCREATE TABLE `clubs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `www` varchar(255), `phone` varchar(255), `email` varchar(255), `address` text, `info` text, `map_link` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `news`[0m
+  [4;35;1mSQL (138.4ms)[0m   [0mCREATE TABLE `news` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `header` varchar(255), `body` text, `valid_from` datetime, `valid_until` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `roles`[0m
+  [4;36;1mSQL (115.9ms)[0m   [0;1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `users`[0m
+  [4;35;1mSQL (114.9ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `firstName` varchar(255), `lastName` varchar(255), `login` varchar(255), `email` varchar(255), `password` varchar(255), `info` text, `role_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mRole Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.3ms)[0m   [0;1mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('návštěvník', '2010-01-16 12:31:38', '2010-01-16 12:31:38')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.2ms)[0m   [0mINSERT INTO `roles` (`name`, `updated_at`, `created_at`) VALUES('administrátor', '2010-01-16 12:31:39', '2010-01-16 12:31:39')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Novák', '2010-01-16 12:31:39', 'Takovej blbec no... nic moc jako, spis ho tak trpime...', 2, 'Marek', 'vlk', 'smradozadek', 'anoha@seznam.cz', '2010-01-16 12:31:39')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO `users` (`lastName`, `updated_at`, `info`, `role_id`, `firstName`, `login`, `password`, `email`, `created_at`) VALUES('Smejkal', '2010-01-16 12:31:39', 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', 1, 'Petr', 'petr', 'vonavozadek', 'xmejkal@gmail.com', '2010-01-16 12:31:39')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mNews Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:31:39', 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', 'Spuštění stránek', '2010-01-16 00:00:00', NULL, '2010-01-16 12:31:39')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:31:39', 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', 'Testovací novinka 1', '2010-01-16 00:00:00', '2010-01-17 00:00:00', '2010-01-16 12:31:39')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:31:39', 'Tato novinka by se mela zobrazovat od 17.1.2010', 'Testovací novinka 2', '2010-01-17 00:00:00', NULL, '2010-01-16 12:31:39')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNews Create (0.2ms)[0m   [0mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:31:39', 'Tato novinka nema nadpis', NULL, '2010-01-16 00:00:00', NULL, '2010-01-16 12:31:39')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNews Create (0.2ms)[0m   [0;1mINSERT INTO `news` (`updated_at`, `body`, `header`, `valid_from`, `valid_until`, `created_at`) VALUES('2010-01-16 12:31:39', 'Tato novinka ma prazdny nadpis', '', '2010-01-16 00:00:00', NULL, '2010-01-16 12:31:39')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mClub Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mClub Create (0.3ms)[0m   [0;1mINSERT INTO `clubs` (`name`, `www`, `updated_at`, `info`, `phone`, `map_link`, `address`, `email`, `created_at`) VALUES('Roxy', 'www.roxy.cz', '2010-01-16 12:31:39', 'trochu techno, ale v pohode..', '+420 123 456 789', NULL, 'Dlouhá 10, Praha, 110 00', 'info@roxy.cz', '2010-01-16 12:31:39')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
