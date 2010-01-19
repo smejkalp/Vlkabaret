@@ -14,6 +14,7 @@ body{
 	height: 131px;
 	padding: 20px;
 	padding-top: 40px;
+	padding-bottom: 0;
 	margin: 0px;
 	background-image: url("../images/bar_30.jpg");
 	background-position: top left;
@@ -49,9 +50,13 @@ h1{
 }
 h3{
 	font-weight: bold;
-	margin-top: 10px;
-	margin-left: 0px;
+	font-size: 11px;
+	margin: 0;
 	margin-bottom: 10px;
+	text-decoration: underline;
+}
+h3.top_margin{
+	margin-top: 20px;
 }
 ul.vertical_menu{
 	list-style-type:none;
@@ -64,17 +69,17 @@ li.vertical_menu{
 	display:inline;
 	padding-left: 27px;
 }
-#kontakt{
+#contact{
 	padding-left: 35px;
 }
 
-a.vertical_menu:link,a.vertical_menu:visited{
+a.vertical_menu:link, a.vertical_menu:visited{
 	font-weight:normal;
 	color:#FFFFFF;
 	text-decoration:none;
 	font-weight: normal;
 }
-a.vertical_menu:hover,a.vertical_menu:active{
+a.vertical_menu:hover, a.vertical_menu:active{
 	text-decoration: underline;
 }
 div.news{
@@ -82,37 +87,42 @@ div.news{
 	background-color: #220000;
 */
 	width: 100%;
-	padding: 5px;
-	margin: 10px;
-	margin-left: 0;
+	margin-bottom: 20px;
 }
 div.concert{
 	margin-bottom: 20px;
 }
 div.concert_name{
-	font-weight: bold;
-	margin-bottom: 10px;
+/*	font-weight: bold;
+	margin-bottom: 5px;
+	text-decoration: underline;;
+*/
 }
 div.concert_info{
-	color: #555555;
+	color: #999999;
 	font-style: italic;
 	margin-bottom: 5px;
 }
 div.concert_price{
 
 }
-div.concert_date{
-
+div.concert_time{
+	margin-bottom: 5px;
+	padding: 0;
+	font-size: 10px;
 }
-p.news_header{
+div.news_header{
 	padding: 0;
 	margin: 0;
 	margin-bottom: 5px;
 	font-weight: bold;
 	text-decoration: none;
 }
-p.news_body{
-	padding: 0;
-	margin: 0;
-	padding-left: 5px;
+div.news_body{
+	color: #999999;
+	font-style: italic;
+	margin-bottom: 5px;
+}
+#first_page{
+	margin-bottom: 20px;
 }

@@ -1,11 +1,9 @@
 <% for concert in @concerts%>
-<div class="concert"> 
-<div class="concert_name"><%=h concert.name%></div>
-
+<div class="concert">
+<div class="concert_name"><h3><%=h concert.name%></h3></div>
+<div class="concert_time"><%=h concert.date_str%>, <%=h concert.time_range_str%></div>
 <div class="concert_info"><%=h concert.info%></div>
 <% if concert.is_in_club? %><div class="concert_club"><%=h concert.club_name%></div><% end %>
-<div class="concert_date"><%=h concert.date_str%></div>
-<div class="concert_time"><%=h concert.time_range_str%></div>
-<div class="concert_price"><%=h concert.price%></div>
+<% if !concert.price.nil? %><div class="concert_price"><%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%></div><% end %>
 </div>
 <% end %>

@@ -13,10 +13,9 @@ User.create(:firstName =>'Petr', :lastName => 'Smejkal', :login => 'petr', :pass
 
 News.create(:header => 'Spuštění stránek', :body => 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', :valid_from => ('January 16, 2010'))
 News.create(:header => 'Testovací novinka 1', :body => 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', :valid_from => ('January 16, 2010'), :valid_until => ('January 17,2010'))
-News.create(:header => 'Testovací novinka 2', :body => 'Tato novinka by se mela zobrazovat od 17.1.2010', :valid_from => ('January 17, 2010'))
-News.create(:body => 'Tato novinka nema nadpis', :valid_from => ('January 16, 2010'))
-News.create(:header => '', :body => 'Tato novinka ma prazdny nadpis', :valid_from => ('January 16, 2010'))
-
+#News.create(:header => 'Testovací novinka 2', :body => 'Tato novinka by se mela zobrazovat od 17.1.2010', :valid_from => ('January 17, 2010'))
+#News.create(:body => 'Tato novinka nema nadpis', :valid_from => ('January 16, 2010'))
+#News.create(:header => '', :body => 'Tato novinka ma prazdny nadpis', :valid_from => ('January 16, 2010'))
 roxy = Club.create(:name => 'Roxy', :www => 'www.roxy.cz', :phone => '+420 123 456 789', :address => 'Dlouhá 10, Praha, 110 00', :email => 'info@roxy.cz', :info => 'trochu techno, ale v pohode..')
 
 Concert.create(:date => ('January 17 2010'), :start_time => ('8:30 pm'), :end_time => ('10:00pm'), :name => 'Koncert na podporu Petra', :price => '100.00', :info => 'Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?', :club_id => roxy.id)
