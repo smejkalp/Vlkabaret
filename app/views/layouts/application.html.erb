@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= stylesheet_link_tag "main" %>
+	<title>Vlkabaret</title>
+	
+</head>
+
+<body>
+<div id="main_container">
+<div id="top_container">
+<div id="header_container">
+	<h1>Vlkabaret</h1>
+	<p id="header_line">Bufetová nostalgie v bílém baretu pivního džbánu....</p>
+</div>
+<div id="menu_container">
+<ul class="vertical_menu">
+<li class="vertical_menu"><%= link_to "Novinky", {:controller => "news", :action => "index"}, :class=> "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "Koncerty", {:controller => "concerts", :action => "index"}, :class=> "vertical_menu" %></li>
+<li class="vertical_menu" id="kontakt"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class=> "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "O nás", {:controller => "main", :action => "about_us"}, :class=> "vertical_menu" %></li>
+</div>
+</div>
+<div id="content_container">
+<%= yield() %>
+</div>	
+</div>
+</body>
+</html>

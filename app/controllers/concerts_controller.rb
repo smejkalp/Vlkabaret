@@ -1,6 +1,6 @@
-class NewsController < ApplicationController
+class ConcertsController < ApplicationController
   def index
-    @news = News.find(:all)
+    @concerts = Concert.find(:all)
   end
 
   def new

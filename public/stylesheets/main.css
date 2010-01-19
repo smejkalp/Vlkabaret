@@ -1,0 +1,114 @@
+body{
+	font: 11px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
+	color: #eeeeee;
+	background-color: #000000;
+}
+#main_container{
+	background-color: #000000;
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	padding: 0px;
+}
+#top_container{
+	height: 131px;
+	padding: 20px;
+	padding-top: 40px;
+	margin: 0px;
+	background-image: url("../images/bar_30.jpg");
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+#header_container{
+	font-size: 8px;
+	margin-left: 370px;
+}
+#header_line{
+	padding: 0;
+	margin: 0;
+}
+#menu_container{
+	position: absolute;
+	font-size: 12px;
+	top: 140px;
+}
+#content_container{
+	height: 100%;
+	margin: 0;
+	padding: 45px;
+	padding-top: 0;
+}
+
+h1{
+	margin:0;
+	padding:0;
+	color: #ffffff;
+	font-size: 30px;
+	font-family: Verdana;
+	text-transform: capitalize;
+}
+h3{
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+ul.vertical_menu{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+li.vertical_menu{
+	display:inline;
+	padding-left: 27px;
+}
+#kontakt{
+	padding-left: 35px;
+}
+
+a.vertical_menu:link,a.vertical_menu:visited{
+	font-weight:normal;
+	color:#FFFFFF;
+	text-decoration:none;
+	font-weight: normal;
+}
+a.vertical_menu:hover,a.vertical_menu:active{
+	text-decoration: underline;
+}
+div.news{
+/*	border: 1px solid #ffffff;
+	background-color: #220000;
+*/
+	width: 100%;
+	padding: 5px;
+	margin: 10px;
+	margin-left: 0;
+}
+div.concert{
+	
+}
+div.concert_name{
+	
+}
+div.concert_info{
+	
+}
+div.concert_price{
+	
+}
+p.news_header{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	font-weight: bold;
+	text-decoration: none;
+}
+p.news_body{
+	padding: 0;
+	margin: 0;
+	padding-left: 5px;
+}

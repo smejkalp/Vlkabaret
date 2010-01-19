@@ -5,10 +5,10 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
-navst = Role.create(:name => 'návštěvník')
-admin = Role.create(:name => 'administrátor')
+navst = Role.create(:name => 'guest')
+member = Role.create(:name => 'member')
 
-User.create(:firstName =>'Marek', :lastName => 'Novák', :login => 'vlk', :password => 'smradozadek', :email => 'anoha@seznam.cz', :info => 'Takovej blbec no... nic moc jako, spis ho tak trpime...', :role_id => admin.id)
+User.create(:firstName =>'Marek', :lastName => 'Novák', :login => 'vlk', :password => 'smradozadek', :email => 'anoha@seznam.cz', :info => 'Takovej blbec no... nic moc jako, spis ho tak trpime...', :role_id => member.id)
 User.create(:firstName =>'Petr', :lastName => 'Smejkal', :login => 'petr', :password => 'vonavozadek', :email => 'xmejkal@gmail.com', :info => 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', :role_id => navst.id)
 
 News.create(:header => 'Spuštění stránek', :body => 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', :valid_from => ('January 16, 2010'))
@@ -19,4 +19,4 @@ News.create(:header => '', :body => 'Tato novinka ma prazdny nadpis', :valid_fro
 
 roxy = Club.create(:name => 'Roxy', :www => 'www.roxy.cz', :phone => '+420 123 456 789', :address => 'Dlouhá 10, Praha, 110 00', :email => 'info@roxy.cz', :info => 'trochu techno, ale v pohode..')
 
-Concert.create(:name => 'Koncert na podporu Petra', :price => '100.00', :info => 'Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?', :club_id => roxy.id)
+Concert.create(:date => ('January 17 2010'), :start_time => ('8:30 pm'), :end_time => ('10:00pm'), :name => 'Koncert na podporu Petra', :price => '100.00', :info => 'Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?', :club_id => roxy.id)

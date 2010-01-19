@@ -1,2 +1,6 @@
-<h1>News#index</h1>
-<p>Find me in app/views/news/index.html.erb</p>
+<% for news in @news %>
+<div class="news">
+	<p class="news_header"><%=h news.header %></p>
+	<p class="news_body"><%=h news.body %></p>
+</div>
+<% end %>
