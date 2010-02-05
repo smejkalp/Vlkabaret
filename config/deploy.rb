@@ -1,6 +1,7 @@
 set :application, "vlkabaret"
-set :repository, "git@github.com:smejkalp/Vlkabaret.git"
-set :scm, "git"
+set :repository, "."
+set :deploy_via, :copy
+set :scm, :none
 
 role :web, "server3.railshosting.cz"
 role :app, "server3.railshosting.cz"
