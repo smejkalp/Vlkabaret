@@ -28,6 +28,11 @@ namespace :deploy do
   end
 end
 
+desc "seeds initial data"
+task :seed, :roles => :app do
+  run "rake db:seed"
+end
+
 
 desc "remotely console" 
 task :console, :roles => :app do
