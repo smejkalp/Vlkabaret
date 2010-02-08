@@ -30,14 +30,14 @@ end
 
 desc "seeds initial data"
 task :seed, :roles => :app do
-  run "cd #{current_path} && rake db:seed"
+  run "cd #{current_path} && rake RAILS_ENV=production db:seed"
 end
 
 
 desc "remotely console" 
 task :console, :roles => :app do
   input = ''
-  run "cd #{current_path} && ./script/console #{ENV['RAILS_ENV']}" do |channel, stream, data|
+  run "cd #{current_path} && ./script/console RAILS_ENV=production" do |channel, stream, data|
     next if data.chomp == input.chomp || data.chomp == ''
     print data
     channel.send_data(input = $stdin.gets) if data =~ /^(>|\?)>/
