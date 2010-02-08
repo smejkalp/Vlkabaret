@@ -17276,3 +17276,28 @@ ActionView::TemplateError (news_url failed to generate from {:action=>"show", :c
 Rendered rescues/_trace (118.2ms)
 Rendered rescues/_request_and_response (0.5ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (59.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (37.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-08 14:47:41) [GET]
+  [4;36;1mNews Columns (346.2ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mNews Load (20.7ms)[0m   [0mSELECT * FROM `news` [0m
+Rendering template within layouts/application
+Rendering news/index
+
+ActionView::TemplateError (news_url failed to generate from {:action=>"show", :controller=>"news"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["news", :id] - are they all satisfied?) on line #9 of app/views/news/index.html.erb:
+6: </div>
+7: <h3 class="top_margin">Novinky</h3>
+8: 
+9: <% form_for @news_new do |f| -%>
+10:  	Nadpis: <%= f.text_field :header %><br>
+11: 	Tělo:<br>
+12: 	<%= f.text_area :body %><br>
+
+    (eval):16:in `news_path'
+    app/views/news/index.html.erb:9
+
+Rendered rescues/_trace (189.1ms)
+Rendered rescues/_request_and_response (21.0ms)
+Rendering rescues/layout (internal_server_error)

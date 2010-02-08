@@ -6,13 +6,6 @@ Mezi šansonovou melancholií a drastickou komikou.
 </div>
 <h3 class="top_margin">Novinky</h3>
 
-<% form_for @news_new do |f| -%>
- 	Nadpis: <%= f.text_field :header %><br>
-	Tělo:<br>
-	<%= f.text_area :body %><br>
-	<%= f.submit "Vytvořit", :disable_with => 'Vytváří se...'  %>	
-<% end -%>
-
 <% for news in @news %>
 <div class="news">
 	<div class="news_header"><%=h news.header %></div>

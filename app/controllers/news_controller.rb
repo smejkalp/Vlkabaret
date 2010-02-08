@@ -1,6 +1,5 @@
 class NewsController < ApplicationController
   def index
-    @news_new = News.new
     @news = News.find(:all)
   end
 
