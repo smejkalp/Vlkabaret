@@ -30,7 +30,7 @@ end
 
 desc "seeds initial data"
 task :seed, :roles => :app do
-  run "rake db:seed"
+  run "cd #{current_path} && rake db:seed"
 end
 
 
