@@ -18,10 +18,10 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: vlkabaret
+  database: vlkabaret_development
   pool: 5
-  username: vlkabaret
-  password: 2mU9j1dl
+  username: root
+  password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: vlkabaret
+  database: vlkabaret_production
   pool: 5
-  username: vlkabaret
-  password: 2mU9j1dl
+  username: root
+  password: 
   socket: /tmp/mysql.sock
