@@ -1,2 +1,13 @@
-<h1>News#new</h1>
-<p>Find me in app/views/news/new.html.erb</p>
+<% form_for @news, :url => {:action => "create"} do |f|  -%>
+	<p>
+		<%= f.label :header, "Nadpis" %><br>
+		<%= f.text_field :header %>
+	</p>
+	<p>
+		<%= f.label :body, "Tělo" %><br>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit "Vložit", :disable_with => 'Vkládám...'  %>
+	</p>
+<% end -%>
