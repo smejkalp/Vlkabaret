@@ -9,6 +9,13 @@ class UserController < ApplicationController
 
   def create
     @user = params[:user]
+     if @news.save
+        flash[:notice] = 'Uživatel byl úspěšně vložen.'
+      else
+        flash[:notice] = 'Nastala chyba při vkládání uživatele!'
+        redirect_to :action => "new"
+      end
+      redirect_to :action => "index"
   end
 
   def edit
