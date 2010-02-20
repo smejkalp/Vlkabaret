@@ -18703,3 +18703,13 @@ Rendering concerts/index
   [4;36;1mClub Load (2.5ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
   [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
 Completed in 142ms (View: 46, DB: 7) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (39.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 17:51:23) [GET]
+  [4;36;1mNews Load (80.0ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (101.3ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 448ms (View: 224, DB: 221) | 200 OK [http://localhost/]
