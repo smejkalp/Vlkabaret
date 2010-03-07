@@ -18713,3 +18713,1715 @@ Rendering template within layouts/application
 Rendering news/index
   [4;35;1mNews Columns (101.3ms)[0m   [0mSHOW FIELDS FROM `news`[0m
 Completed in 448ms (View: 224, DB: 221) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 18:28:25) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 34ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 18:37:12) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 34ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 20:05:19) [GET]
+  [4;36;1mNews Load (0.8ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 36ms (View: 12, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:05:30) [GET]
+  [4;36;1mConcert Load (81.0ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (31.3ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (61.1ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 427ms (View: 188, DB: 176) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#new (for 127.0.0.1 at 2010-02-20 20:05:34) [GET]
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+Rendering template within layouts/application
+Rendering concerts/new
+
+ActionView::TemplateError (undefined method `concerts_path' for #<ActionView::Base:0x254da24>) on line #1 of app/views/concerts/new.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/new.html.erb:1
+
+Rendered rescues/_trace (111.1ms)
+Rendered rescues/_request_and_response (27.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#new (for 127.0.0.1 at 2010-02-20 20:08:07) [GET]
+  [4;36;1mConcert Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+Rendering template within layouts/application
+Rendering concerts/new
+Completed in 53ms (View: 29, DB: 2) | 200 OK [http://localhost/concerts/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:08:10) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x24ecfd0>) on line #4 of app/views/concerts/index.html.erb:
+1: <% for concert in @concerts%>
+2: <div class="concert">
+3: <div>
+4: 	<%= link_to 'Edit', edit_concert_path(post) %>
+5: </div>
+6: <div class="concert_name"><h3><%=h concert.name%></h3></div>
+7: <div class="concert_time"><%=h concert.date_str%>, <%=h concert.time_range_str%></div>
+
+    app/views/concerts/index.html.erb:4
+    app/views/concerts/index.html.erb:1:in `each'
+    app/views/concerts/index.html.erb:1
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:08:40) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0x23492f0>) on line #4 of app/views/concerts/index.html.erb:
+1: <% for concert in @concerts%>
+2: <div class="concert">
+3: <div>
+4: 	<%= link_to 'Edit', edit_concert_path(post) %>
+5: </div>
+6: <div class="concert_name"><h3><%=h concert.name%></h3></div>
+7: <div class="concert_time"><%=h concert.date_str%>, <%=h concert.time_range_str%></div>
+
+    app/views/concerts/index.html.erb:4
+    app/views/concerts/index.html.erb:1:in `each'
+    app/views/concerts/index.html.erb:1
+
+Rendered rescues/_trace (102.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:08:55) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 82ms (View: 57, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:09:02) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:09:34) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:46) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:47) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:48) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:48) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:48) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#1 (for 127.0.0.1 at 2010-02-20 20:13:49) [GET]
+  Parameters: {"id"=>"edit"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 20:14:24) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (18.3ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 204ms (View: 163, DB: 19) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:14:26) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (13.6ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (2.7ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 135ms (View: 86, DB: 19) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457f5c> (for 127.0.0.1 at 2010-02-20 20:14:28) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (156.9ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457f5c> (for 127.0.0.1 at 2010-02-20 20:15:13) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (86.5ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457f5c> (for 127.0.0.1 at 2010-02-20 20:15:24) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (89.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 20:16:25) [GET]
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 35ms (View: 12, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:16:28) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 85ms (View: 59, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 20:16:33) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (94.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 20:17:44) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (160.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 20:18:51) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 108ms (View: 86, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:18:53) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 111ms (View: 79, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457f5c> (for 127.0.0.1 at 2010-02-20 20:18:55) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (159.2ms)
+Rendered rescues/_request_and_response (4.2ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:21:00) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 161ms (View: 130, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x24e2e68> (for 127.0.0.1 at 2010-02-20 20:21:02) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (100.3ms)
+Rendered rescues/_request_and_response (3.8ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x24e2e68> (for 127.0.0.1 at 2010-02-20 20:45:25) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (84.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 20:57:04) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 186ms (View: 160, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 20:57:06) [GET]
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (2.0ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.5ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 152ms (View: 96, DB: 8) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457f5c> (for 127.0.0.1 at 2010-02-20 20:57:12) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (179.1ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457804> (for 127.0.0.1 at 2010-02-20 21:00:44) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find Concert without an ID):
+  app/controllers/concerts_controller.rb:21:in `edit'
+
+Rendered rescues/_trace (97.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457804> (for 127.0.0.1 at 2010-02-20 21:12:14) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457804> (for 127.0.0.1 at 2010-02-20 21:12:17) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 21:12:36) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 123ms (View: 93, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 21:12:39) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (16.3ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (1.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 166ms (View: 90, DB: 20) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2457840> (for 127.0.0.1 at 2010-02-20 21:12:41) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-20 21:13:59) [GET]
+Rendering template within layouts/application
+Rendering concerts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/concerts/edit.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/edit.html.erb:1
+
+Rendered rescues/_trace (124.8ms)
+Rendered rescues/_request_and_response (3.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:14:12) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:14:16) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:15:31) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:25:53) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:25:53) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:04) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:26:19) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-20 21:26:20) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:29) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:31) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:31) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:31) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:31) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:52) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:53) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.5ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:26:53) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:27:07) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:27:08) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:27:08) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to 1 (for 127.0.0.1 at 2010-02-20 21:27:08) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-20 21:27:58) [GET]
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 42ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 21:28:01) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 98ms (View: 70, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2486e9c> (for 127.0.0.1 at 2010-02-20 21:28:03) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2486e9c> (for 127.0.0.1 at 2010-02-20 21:29:13) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-20 21:29:17) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (4.2ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (5.3ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.6ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (2.0ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 120ms (View: 84, DB: 13) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-20 21:29:19) [GET]
+Rendering template within layouts/application
+Rendering concerts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/concerts/edit.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/edit.html.erb:1
+
+Rendered rescues/_trace (142.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (144.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (34.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 14:49:52) [GET]
+  [4;36;1mNews Load (399.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (76.4ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 828ms (View: 314, DB: 655) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 14:49:58) [GET]
+  [4;36;1mConcert Load (82.2ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (16.8ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 328ms (View: 146, DB: 114) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit to #<concert:0x2455784> (for 127.0.0.1 at 2010-02-23 14:50:01) [GET]
+
+ActionView::MissingTemplate (Missing template concerts/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 14:56:38) [GET]
+
+ActionController::RoutingError (No route matches "/concert/edit.%23%3Cconcert:0x2455784%3E" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 14:56:43) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (No route matches {:action=>"contact", :controller=>"main"}) on line #23 of app/views/layouts/application.html.erb:
+20: <ul class="vertical_menu">
+21: <li class="vertical_menu"><%= link_to "Úvod", {:controller => "news", :action => "index"}, :class=> "vertical_menu" %></li>
+22: <li class="vertical_menu"><%= link_to "Program", {:controller => "concerts", :action => "index"}, :class=> "vertical_menu" %></li>
+23: <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class=> "vertical_menu" %></li>
+24: <li class="vertical_menu"><%= link_to "O nás", {:controller => "main", :action => "about_us"}, :class=> "vertical_menu" %></li>
+25: </div>
+26: </div>
+
+    app/views/layouts/application.html.erb:23
+
+Rendered rescues/_trace (176.8ms)
+Rendered rescues/_request_and_response (3.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 14:59:50) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 47ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-23 14:59:53) [GET]
+  [4;36;1mRole Columns (52.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (13.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 215ms (View: 44, DB: 68) | 200 OK [http://localhost/main/about_us]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#contact (for 127.0.0.1 at 2010-02-23 15:00:06) [GET]
+Rendering template within layouts/application
+Rendering main/contact
+Completed in 110ms (View: 101, DB: 0) | 200 OK [http://localhost/main/contact]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:00:07) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 83ms (View: 59, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:00:09) [GET]
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 33ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:00:11) [GET]
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 47, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#contact (for 127.0.0.1 at 2010-02-23 15:00:12) [GET]
+Rendering template within layouts/application
+Rendering main/contact
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/main/contact]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-23 15:00:12) [GET]
+  [4;36;1mRole Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 52ms (View: 15, DB: 4) | 200 OK [http://localhost/main/about_us]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:00:14) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 33ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:00:29) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (No route matches {:action=>"contact", :controller=>"main"}) on line #23 of app/views/layouts/application.html.erb:
+20: <ul class="vertical_menu">
+21: <li class="vertical_menu"><%= link_to "Úvod", {:controller => "news", :action => "index"}, :class => "vertical_menu" %></li>
+22: <li class="vertical_menu"><%= link_to "Program", {:controller => "concerts", :action => "index"}, :class => "vertical_menu" %></li>
+23: <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class => "vertical_menu" %></li>
+24: <li class="vertical_menu"><%= link_to "O nás", {:controller => "main", :action => "about_us"}, :class=> "vertical_menu" %></li>
+25: </div>
+26: </div>
+
+    app/views/layouts/application.html.erb:23
+
+Rendered rescues/_trace (115.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:03:28) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 107ms (View: 85, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:04:33) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `concerts' for #<ActionView::Base:0x2402264>) on line #22 of app/views/layouts/application.html.erb:
+19: <div id="menu_container">
+20: <ul class="vertical_menu">
+21: <li class="vertical_menu"><%= link_to "Úvod", root_path, :class => "vertical_menu" %></li>
+22: <li class="vertical_menu"><%= link_to "Program", concerts, :class => "vertical_menu" %></li>
+23: <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class => "vertical_menu" %></li>
+24: <li class="vertical_menu"><%= link_to "O nás", {:controller => "main", :action => "about_us"}, :class=> "vertical_menu" %></li>
+25: </div>
+
+    app/views/layouts/application.html.erb:22
+
+Rendered rescues/_trace (103.4ms)
+Rendered rescues/_request_and_response (3.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:04:38) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 46ms (View: 24, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:04:47) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 44ms (View: 22, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-23 15:08:36) [GET]
+  [4;36;1mRole Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 159ms (View: 100, DB: 4) | 200 OK [http://localhost/onas]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-02-23 15:08:59) [GET]
+
+ActionController::RoutingError (No route matches "/onas" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:09:03) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 35ms (View: 12, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-23 15:09:05) [GET]
+  [4;36;1mRole Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 53ms (View: 13, DB: 4) | 200 OK [http://localhost/o-nas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#contact (for 127.0.0.1 at 2010-02-23 15:09:48) [GET]
+Rendering template within layouts/application
+Rendering main/contact
+Completed in 24ms (View: 14, DB: 0) | 200 OK [http://localhost/kontakt]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:09:50) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 84ms (View: 58, DB: 5) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:09:52) [GET]
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:10:04) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 46, DB: 5) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#contact (for 127.0.0.1 at 2010-02-23 15:10:05) [GET]
+Rendering template within layouts/application
+Rendering main/contact
+Completed in 15ms (View: 5, DB: 0) | 200 OK [http://localhost/kontakt]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:10:07) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 70ms (View: 45, DB: 5) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-23 15:10:09) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering concerts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/concerts/edit.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/edit.html.erb:1
+
+Rendered rescues/_trace (177.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-23 15:19:25) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering concerts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/concerts/edit.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/edit.html.erb:1
+
+Rendered rescues/_trace (107.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-23 15:35:44) [GET]
+  [4;35;1mNews Load (0.4ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (12.2ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 43ms (View: 11, DB: 13) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-23 15:35:47) [GET]
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 147ms (View: 122, DB: 5) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-23 15:35:48) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/application
+Rendering concerts/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/concerts/edit.html.erb:
+1: <% form_for @concert do |f| -%>
+2:   	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+3: 	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+4: 	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+
+    app/views/concerts/edit.html.erb:1
+
+Rendered rescues/_trace (106.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-23 15:36:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConcert Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 52ms (View: 28, DB: 2) | 200 OK [http://localhost/concerts/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-23 15:36:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConcert Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 53ms (View: 28, DB: 2) | 200 OK [http://localhost/concerts/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-25 23:19:47) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 235ms (View: 204, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-25 23:20:10) [GET]
+  [4;36;1mConcert Load (0.5ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 198ms (View: 126, DB: 6) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-25 23:20:11) [GET]
+  [4;35;1mNews Load (1.0ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 33ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-25 23:20:13) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 70ms (View: 45, DB: 5) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-25 23:20:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConcert Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 159ms (View: 68, DB: 3) | 200 OK [http://localhost/concerts/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-25 23:20:31) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 70ms (View: 46, DB: 5) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-02-25 23:20:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 53ms (View: 28, DB: 2) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-25 23:20:48) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 45, DB: 6) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#contact (for 127.0.0.1 at 2010-02-25 23:21:13) [GET]
+Rendering template within layouts/application
+Rendering main/contact
+Completed in 50ms (View: 41, DB: 0) | 200 OK [http://localhost/kontakt]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-25 23:21:14) [GET]
+  [4;36;1mRole Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.4ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 114ms (View: 54, DB: 6) | 200 OK [http://localhost/o-nas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#about_us (for 127.0.0.1 at 2010-02-25 23:21:15) [GET]
+  [4;36;1mRole Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (2.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/about_us
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 142ms (View: 16, DB: 7) | 200 OK [http://localhost/o-nas]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-02-25 23:21:21) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-02-25 23:21:26) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (10.3ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 81ms (View: 47, DB: 14) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (90.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (22.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-05 17:37:03) [GET]
+  [4;36;1mNews Load (153.3ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (64.1ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 473ms (View: 216, DB: 331) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-05 17:37:12) [GET]
+  [4;36;1mConcert Load (207.5ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (30.5ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (335.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (21.5ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 1355ms (View: 486, DB: 596) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-05 17:37:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (57.1ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (103.8ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 496ms (View: 311, DB: 161) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#update (for 127.0.0.1 at 2010-03-05 17:37:22) [PUT]
+  Parameters: {"authenticity_token"=>"wkXbgtaOoZzYB8pzCmtrOtXnvNBIRL8VCxhwHZ/UObo=", "id"=>"1", "concert"=>{"name"=>"Koncert na podporu Petra a kamosu", "price"=>"100.00", "date"=>"2010-01-17", "info"=>"Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?", "end_time"=>"22:00:00", "start_time"=>"20:30:00"}}
+  [4;35;1mConcert Columns (44.5ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (13.5ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mConcert Update (204.4ms)[0m   [0;1mUPDATE `concerts` SET `updated_at` = '2010-03-05 16:37:22', `name` = 'Koncert na podporu Petra a kamosu' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering concerts/update
+Completed in 562ms (View: 254, DB: 264) | 200 OK [http://localhost/concerts/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-07 12:04:13) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 295ms (View: 226, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-07 12:04:19) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:04:20) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 210ms (View: 134, DB: 5) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:06:44) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 46, DB: 5) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:06:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 179ms (View: 154, DB: 2) | 200 OK [http://localhost/concerts/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#update (for 127.0.0.1 at 2010-03-07 12:06:51) [PUT]
+  Parameters: {"authenticity_token"=>"x+1fIOoVd8/0cJ/MQpENuqwwfJPkLhrdfK0RaQn5AP8=", "id"=>"1", "concert"=>{"name"=>"Koncert na podporu Petra", "price"=>"100.00", "date"=>"2010-01-17", "info"=>"Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?", "end_time"=>"22:00:00", "start_time"=>"20:30:00"}}
+  [4;36;1mConcert Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mConcert Update (0.3ms)[0m   [0mUPDATE `concerts` SET `updated_at` = '2010-03-07 11:06:51', `name` = 'Koncert na podporu Petra' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering concerts/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #1 of app/views/concerts/index.html.erb:
+1: <% for concert in @concerts%>
+2: <div class="concert">
+3: <div>
+4: 	<%= link_to 'Edit', edit_concert_path(concert) %>
+
+    app/views/concerts/index.html.erb:1
+    app/controllers/concerts_controller.rb:33:in `update'
+
+Rendered rescues/_trace (105.4ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:07:07) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 146ms (View: 120, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:07:39) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 72ms (View: 46, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:07:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 53ms (View: 28, DB: 2) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:10:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 73ms (View: 48, DB: 3) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:11:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 72ms (View: 47, DB: 3) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:11:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mConcert Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 73ms (View: 47, DB: 3) | 200 OK [http://localhost/concerts/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#update (for 127.0.0.1 at 2010-03-07 12:11:42) [PUT]
+  Parameters: {"commit"=>"Uložit", "authenticity_token"=>"x+1fIOoVd8/0cJ/MQpENuqwwfJPkLhrdfK0RaQn5AP8=", "id"=>"1", "concert"=>{"name"=>"Koncert na podporu Petra atd.", "price"=>"100.00", "date"=>"2010-01-17", "info"=>"Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?", "end_time"=>"22:00:00", "start_time"=>"20:30:00"}}
+  [4;35;1mConcert Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mConcert Update (0.3ms)[0m   [0;1mUPDATE `concerts` SET `updated_at` = '2010-03-07 11:11:42', `name` = 'Koncert na podporu Petra atd.' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/concerts
+Completed in 39ms (DB: 3) | 302 Found [http://localhost/concerts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:11:42) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 72ms (View: 46, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:12:16) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 46, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#edit (for 127.0.0.1 at 2010-03-07 12:56:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mConcert Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering concerts/edit
+Completed in 62ms (View: 37, DB: 3) | 200 OK [http://localhost/concerts/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#update (for 127.0.0.1 at 2010-03-07 12:56:42) [PUT]
+  Parameters: {"commit"=>"Uložit", "authenticity_token"=>"x+1fIOoVd8/0cJ/MQpENuqwwfJPkLhrdfK0RaQn5AP8=", "id"=>"1", "concert"=>{"name"=>"Koncert na podporu Petra atd.", "price"=>"100.00", "date"=>"2010-01-17", "info"=>"Petr je sakra dobrej kluk, tak by bylo docela spravny pro nej vybrat nejaky ty penize, nemyslite?", "end_time"=>"22:00:00", "start_time"=>"20:30:00"}}
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` WHERE (`concerts`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/concerts
+Completed in 37ms (DB: 3) | 302 Found [http://localhost/concerts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 12:56:42) [GET]
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 44, DB: 5) | 200 OK [http://localhost/concerts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-07 14:26:57) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 71ms (View: 45, DB: 5) | 200 OK [http://localhost/concerts]

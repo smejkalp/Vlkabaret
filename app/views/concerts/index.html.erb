@@ -1,5 +1,8 @@
 <% for concert in @concerts%>
 <div class="concert">
+<div>
+	<%= link_to 'Edit', edit_concert_path(concert) %>
+</div>
 <div class="concert_name"><h3><%=h concert.name%></h3></div>
 <div class="concert_time"><%=h concert.date_str%>, <%=h concert.time_range_str%></div>
 <div class="concert_info"><%=h concert.info%></div>

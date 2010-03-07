@@ -1,2 +1,8 @@
-<h1>Concerts#create</h1>
-<p>Find me in app/views/concerts/create.html.erb</p>
+<% form_for @concert do |f| -%>
+  	<%= f.label :name, "Název" %><%= f.text_field :name %><br>
+	<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
+	<%= f.label :price, "Cena" %><%= f.text_field :price %><br>
+	<%= f.label :date, "Datum:" %><%= f.text_field :date %><br>
+	<%= f.label :start_time, "Začátek" %><%= f.text_field :start_time %><br>
+	<%= f.label :end_time, "Konec" %><%= f.text_field :end_time %>
+<% end -%>

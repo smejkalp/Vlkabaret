@@ -18,14 +18,14 @@
 </div>
 <div id="menu_container">
 <ul class="vertical_menu">
-<li class="vertical_menu"><%= link_to "Úvod", {:controller => "news", :action => "index"}, :class=> "vertical_menu" %></li>
-<li class="vertical_menu"><%= link_to "Program", {:controller => "concerts", :action => "index"}, :class=> "vertical_menu" %></li>
-<li class="vertical_menu" id="contact"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class=> "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "Úvod", root_path, :class => "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "Program", program_path, :class => "vertical_menu" %></li>
+<li class="vertical_menu" id="contact"> <%= link_to "Kontakt", {:controller => "main", :action => "contact"}, :class => "vertical_menu" %></li>
 <li class="vertical_menu"><%= link_to "O nás", {:controller => "main", :action => "about_us"}, :class=> "vertical_menu" %></li>
 </div>
 </div>
 <div id="content_container">
-<%= yield() %>
+<%= yield %>
 </div>	
 </div>
 </body>

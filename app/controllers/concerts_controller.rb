@@ -14,16 +14,31 @@ class ConcertsController < ApplicationController
     else 
       flash[:notice] = "Objevil se problém při vkládání koncertu, prosím informujte správce systému."
     end
-    redirect_to :action => "index"
+    redirect_to concerts_path
   end
 
   def edit
+    @concert = Concert.find params[:id]
+  end
+  
+  def show
+    @concert = Concert.find(params[:id])
   end
 
   def update
+    @concert = Concert.find(params[:id])
+    
+    if @concert.update_attributes(params[:concert])
+      flash[:notice] = "Akce byla úspěšně upravena."
+      redirect_to concerts_path
+    else
+      render :action => "edit"
+    end
   end
 
   def destroy
+    @concert = Concert.find(params[:id])
+    @concert.destroy
   end
 
 end
