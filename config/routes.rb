@@ -42,9 +42,10 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "news", :action => "index"
   map.contact 'kontakt', :controller => 'main', :action => 'contact' 
-  map.about_us 'o-nas', :controller => 'main', :action => 'about_us'
+  map.about_us 'o-nas', :controller => 'actors', :action => 'index'
   map.program 'program', :controller => 'concerts', :action => 'index'
   
+  map.resources :actors
   map.resource :news
   map.resources :concerts
   # map.connect ':controller/:action/:id'

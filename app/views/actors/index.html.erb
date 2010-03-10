@@ -1,2 +1,8 @@
-<h1>Actors#index</h1>
-<p>Find me in app/views/actors/index.html.erb</p>
+<h3>O Vlkabaretu</h3>Vlkabaret je skupina herců a hudebníků inspirujících se tradicí kabaretního umění v Německu, Francii a Praze od přelomu 19. a 20.stol do 2.sv.v. (Kabaret Elf Scharfrichter, Simpl, Chat Noir, Červená sedma, Bum, Ferenc Futurista, Ivo Rubín) Páteří představení jsou autorské písně Marka Vlka Nováka a členů Vlkabaretu, citlivě převedené do divadelní formy mj. za použití hereckých scén, loutek, převleků a masek. V programu zaznívají také písně z předválečného kabaretu (Ivo Rubín z Červené sedmy), zhudebněné básně (Christian Morgenstern) a čínské písně. Důležitou složkou je rozmanitost nástrojů – tři akordeony, malá a velká kytara, klavír, xylofon, buben, perkuse. 
+Nálada představení se pohybuje mezi šansonovou melancholií a drastickou komikou. Atmosféra nejistoty mezi dvěma světovými válkami lehce rezonuje se současností. Snažíme se o pozdvižení kabaretu jako uměleckého žánru.
+<h3 class="top_margin">Členové</h3>
+	<ul>
+		<% for actor in @actors %>
+		<li><%=h actor.firstName %> <%=h actor.lastName%></li>
+		<% end %>
+	</ul>
