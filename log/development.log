@@ -21670,3 +21670,400 @@ Rendering actors/index
   [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
   [4;35;1mUser Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
 Completed in 52ms (View: 12, DB: 4) | 200 OK [http://localhost/actors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (151.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (72.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100116111840)
+Migrating to CreateRoles (20100116114024)
+Migrating to CreateNews (20100116120006)
+Migrating to CreateClubs (20100116122148)
+Migrating to CreateConcerts (20100116123724)
+Migrating to AddDateAndTimeToConcert (20100119125524)
+Migrating to AuthLogicUserSchemaUpdate (20100310124503)
+  [4;36;1mSQL (712.9ms)[0m   [0;1mALTER TABLE `users` DROP `password`[0m
+  [4;35;1mSQL (214.5ms)[0m   [0mALTER TABLE `users` ADD `password_salt` varchar(255)[0m
+  [4;36;1mSQL (252.3ms)[0m   [0;1mALTER TABLE `users` ADD `crypted_password` varchar(255)[0m
+  [4;35;1mSQL (147.7ms)[0m   [0mALTER TABLE `users` ADD `persistence_token` varchar(255)[0m
+  [4;36;1mSQL (28.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100310124503')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mdescribe `clubs`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `clubs`[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `concerts`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `concerts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `news`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `news`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (175.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (27.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:01) [GET]
+  [4;36;1mNews Load (352.2ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (329.2ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 1366ms (View: 638, DB: 884) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:02) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 36ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:02) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:03) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:03) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:12) [GET]
+  [4;36;1mNews Load (0.5ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mNews Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 34ms (View: 10, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 15:33:13) [GET]
+  [4;36;1mConcert Load (134.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (135.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 577ms (View: 237, DB: 276) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-11 15:33:21) [GET]
+  [4;35;1mRole Columns (10.8ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (80.4ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;35;1mUser Load (26.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.role_id = 2) [0m
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 347ms (View: 139, DB: 119) | 200 OK [http://localhost/actors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 15:33:23) [GET]
+  [4;35;1mNews Load (0.5ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 32ms (View: 9, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 15:33:28) [GET]
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (20.7ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (29.4ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.4ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.5ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 562ms (View: 172, DB: 52) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 15:40:32) [GET]
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (24.6ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.5ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 238ms (View: 160, DB: 30) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 16:20:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 291ms (View: 217, DB: 5) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-03-11 16:20:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NameError (uninitialized constant UserSessionController):
+  
+
+Rendered rescues/_trace (78.8ms)
+Rendered rescues/_request_and_response (19.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-03-11 16:23:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NameError (uninitialized constant UserSessionController):
+  
+
+Rendered rescues/_trace (68.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-03-11 16:27:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NameError (uninitialized constant UserSessionController):
+  
+
+Rendered rescues/_trace (69.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:36:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x25a9b44>):
+  
+
+Rendered rescues/_trace (82.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:36:53) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x24927d8>):
+  
+
+Rendered rescues/_trace (162.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:36:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x25dfe9c>):
+  
+
+Rendered rescues/_trace (82.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:36:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x24ebaa4>):
+  
+
+Rendered rescues/_trace (162.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:39:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x2626874>):
+  
+
+Rendered rescues/_trace (85.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 18:40:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.3ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.4ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 193ms (View: 143, DB: 5) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:40:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x24a1468>):
+  
+
+Rendered rescues/_trace (163.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:40:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+
+NoMethodError (undefined method `require_no_user' for #<UserSessionController:0x261c004>):
+  
+
+Rendered rescues/_trace (81.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:41:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+  [4;36;1mUser Columns (31.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActionView::MissingTemplate (Missing template user_session/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 18:51:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;35;1mNews Load (0.9ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 167ms (View: 121, DB: 4) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 18:51:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;35;1mConcert Load (0.4ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mConcert Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `concerts`[0m
+  [4;35;1mClub Columns (3.2ms)[0m   [0mSHOW FIELDS FROM `clubs`[0m
+  [4;36;1mClub Load (0.5ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;35;1mClub Load (0.3ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 125ms (View: 70, DB: 7) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:51:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+  [4;36;1mUser Columns (3.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActionView::MissingTemplate (Missing template user_session/new.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionController#new (for 127.0.0.1 at 2010-03-11 18:51:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_session"}
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_session/new
+Completed in 128ms (View: 69, DB: 3) | 200 OK [http://localhost/prihlaseni]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-11 18:52:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;36;1mConcert Load (0.4ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mConcert Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `concerts`[0m
+  [4;36;1mClub Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `clubs`[0m
+  [4;35;1mClub Load (0.5ms)[0m   [0mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 1) [0m
+  [4;36;1mClub Load (0.6ms)[0m   [0;1mSELECT * FROM `clubs` WHERE (`clubs`.`id` = 2) [0m
+Completed in 89ms (View: 59, DB: 6) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-11 18:52:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;35;1mNews Load (0.5ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mNews Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 38ms (View: 12, DB: 3) | 200 OK [http://localhost/]
