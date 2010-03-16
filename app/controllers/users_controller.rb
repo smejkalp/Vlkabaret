@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def index
     @users = User.find(:all)
   end
@@ -8,14 +8,15 @@ class UserController < ApplicationController
   end
 
   def create
-    @user = params[:user]
-     if @news.save
+    @user = User.new(params[:user])
+     if @user.save
         flash[:notice] = 'Uživatel byl úspěšně vložen.'
+        redirect_to users_path
       else
         flash[:notice] = 'Nastala chyba při vkládání uživatele!'
-        redirect_to new_user_path
+        render :action => "new"
       end
-      redirect_to users_path
+      
   end
 
   def edit

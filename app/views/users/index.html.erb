@@ -1,0 +1,9 @@
+<% for user in @users%>
+<div class="user">
+<div>
+	<%= link_to 'Edit', edit_user_path(user) %>
+</div>
+<div class="user_name"><h3><%=h user.firstName%> <%=h user.lastName%></h3></div>
+<div class="user_info"><%=h user.info%>
+</div>
+<% end %>

@@ -51,6 +51,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :actors
   map.resource :news
   map.resources :concerts
+  map.resources :users
   
   map.resource :user_session
   # map.connect ':controller/:action/:id'
