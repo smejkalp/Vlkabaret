@@ -42,18 +42,21 @@ ActionController::Routing::Routes.draw do |map|
   
   map.root :controller => "news", :action => "index"
   map.contact 'kontakt', :controller => 'main', :action => 'contact' 
-  map.about_us 'o-nas', :controller => 'actors', :action => 'index'
   map.program 'program', :controller => 'concerts', :action => 'index'
   
   map.login 'login', :controller => 'user_sessions', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
     
   map.create_session 'create_session', :controller => 'user_sessions', :action => 'create'  
+  
+  map.contacts 'kontakty', :controller => "contacts", :action => "index"  
     
   map.resources :actors
   map.resource :news
   map.resources :concerts
   map.resources :users
+  
+  map.about_us 'onas', :controller => 'actors', :action => 'index'
 
   # map.connect ':controller/:action/:id'
   # map.connect ':controller/:action/:id.:format'

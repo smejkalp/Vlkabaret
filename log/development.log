@@ -25461,3 +25461,318 @@ Rendering template within layouts/application
 Rendering concerts/index
   [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
 Completed in 65ms (View: 41, DB: 3) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:16:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mUser Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 176ms (View: 150, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2010-03-20 19:17:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 50, DB: 3) | 200 OK [http://localhost/kontakty]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-20 19:17:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;35;1mConcert Load (0.3ms)[0m   [0mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 65ms (View: 40, DB: 2) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:17:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 63ms (View: 40, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2010-03-20 19:17:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 54ms (View: 41, DB: 2) | 200 OK [http://localhost/kontakty]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:17:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;36;1mRole Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 72ms (View: 43, DB: 4) | 200 OK [http://localhost/actors]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:17:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;35;1mRole Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.2ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 69ms (View: 42, DB: 4) | 200 OK [http://localhost/actors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:17:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mUser Columns (65.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 132ms (View: 45, DB: 66) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-20 19:17:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 65ms (View: 41, DB: 3) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2010-03-20 19:17:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 56ms (View: 43, DB: 2) | 200 OK [http://localhost/kontakty]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:17:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;35;1mRole Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.3ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 69ms (View: 41, DB: 4) | 200 OK [http://localhost/actors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:18:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;36;1mRole Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+ActionView::TemplateError (undefined local variable or method `about' for #<ActionView::Base:0x2466d68>) on line #33 of app/views/layouts/application.html.erb:
+30: <li class="vertical_menu"><%= link_to "Úvod", root_path, :class => "vertical_menu" %></li>
+31: <li class="vertical_menu"><%= link_to "Program", program_path, :class => "vertical_menu" %></li>
+32: <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", contacts_path, :class => "vertical_menu" %></li>
+33: <li class="vertical_menu"><%= link_to "O nás", about-us_path, :class=> "vertical_menu" %></li>
+34: <li class="vertical_menu"><%= link_to "Uživatelé", users_path, :class => "vertical_menu" %></li>
+35: </div>
+36: </div>
+
+    app/views/layouts/application.html.erb:33
+
+Rendered rescues/_trace (181.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:19:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;35;1mRole Columns (5.1ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (29.8ms)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 125ms (View: 64, DB: 37) | 200 OK [http://localhost/actors]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:19:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;36;1mNews Load (0.3ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mUser Columns (9.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 72ms (View: 41, DB: 10) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActorsController#index (for 127.0.0.1 at 2010-03-20 19:19:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"actors"}
+  [4;36;1mRole Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.5ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`name` = 'member') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering actors/index
+  [4;36;1mUser Columns (13.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 89ms (View: 48, DB: 16) | 200 OK [http://localhost/o-nas]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2010-03-20 19:19:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;35;1mUser Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 148ms (View: 134, DB: 4) | 200 OK [http://localhost/kontakty]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-20 19:19:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mUser Columns (39.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 116ms (View: 54, DB: 40) | 200 OK [http://localhost/program]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:19:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 65ms (View: 42, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-20 19:19:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 62ms (View: 26, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-20 19:19:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 147ms (View: 27, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-03-20 19:20:01) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 66ms (View: 18, DB: 2) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (2.7ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-03-20 19:20:09) [POST]
+  Parameters: {"commit"=>"Login", "user_session"=>{"password"=>"[FILTERED]", "login"=>"muk", "remember_me"=>"0"}, "action"=>"create", "authenticity_token"=>"vrwu7kV+ncs+FUDyzib+g8XKuJhwDZOi9ukBDB5EndM=", "controller"=>"user_sessions"}
+  [4;35;1mUser Columns (125.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(`users`.login) = 'muk') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 189ms (DB: 129) | 302 Found [http://localhost/create_session]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:20:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mUser Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 75ms (View: 51, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#index (for 127.0.0.1 at 2010-03-20 19:20:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"contacts"}
+Rendering template within layouts/application
+Rendering contacts/index
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 63ms (View: 51, DB: 2) | 200 OK [http://localhost/kontakty]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ConcertsController#index (for 127.0.0.1 at 2010-03-20 19:20:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"concerts"}
+  [4;36;1mConcert Load (0.3ms)[0m   [0;1mSELECT * FROM `concerts` [0m
+Rendering template within layouts/application
+Rendering concerts/index
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 165ms (View: 141, DB: 3) | 200 OK [http://localhost/program]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewsController#index (for 127.0.0.1 at 2010-03-20 19:20:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"news"}
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM `news` ORDER BY created_at ASC[0m
+Rendering template within layouts/application
+Rendering news/index
+  [4;36;1mUser Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 75ms (View: 51, DB: 3) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-03-20 19:20:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = '1') LIMIT 1[0m
+Completed in 67ms (View: 30, DB: 3) | 200 OK [http://localhost/users]
