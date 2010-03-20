@@ -1,6 +1,7 @@
 class ActorsController < ApplicationController
   def index
-      @actors = Role.find_by_name('member').users
+      @role = Role.find_by_name('member')
+      @actors = @role.users unless @role.nil?
   end
 
   def new

@@ -45,15 +45,16 @@ ActionController::Routing::Routes.draw do |map|
   map.about_us 'o-nas', :controller => 'actors', :action => 'index'
   map.program 'program', :controller => 'concerts', :action => 'index'
   
-  map.login 'prihlaseni', :controller => 'user_session', :action => 'new'
-  map.login 'odhlaseni', :controller => 'user_session', :action => 'destroy'
+  map.login 'login', :controller => 'user_sessions', :action => 'new'
+  map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
+    
+  map.create_session 'create_session', :controller => 'user_sessions', :action => 'create'  
     
   map.resources :actors
   map.resource :news
   map.resources :concerts
   map.resources :users
-  
-  map.resource :user_session
+
   # map.connect ':controller/:action/:id'
   # map.connect ':controller/:action/:id.:format'
 end

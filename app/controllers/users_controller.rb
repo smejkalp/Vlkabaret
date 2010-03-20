@@ -29,18 +29,18 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Akce byla úspěšně upravena."
-      redirect_to concerts_path
+      flash[:notice] = "Uživatel byl úspěšně upraven."
+      redirect_to users_path
     else
+      flash[:notice] = 'Nastala chyba při upravování uživatele!'
       render :action => "edit"
     end
   end
 
   def destroy
-    @concert = Concert.find(params[:id])
-    @concert.destroy
+    @user = User.find(params[:id])
+    @user.destroy
   end
 
 end

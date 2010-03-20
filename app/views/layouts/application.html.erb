@@ -15,14 +15,15 @@
 <div id="header_container">
 	<h1>Vlkabaret</h1>
 	<p id="header_line">Bufetová nostalgie v bílém baretu pivního džbánu....</p>
-	<% if flash[:warning] or flash[:notice] %>
-	  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
-	    <%= flash[:warning] || flash[:notice] %>
-	  </div>
-	  <script type="text/javascript">
-	    setTimeout("new Effect.Fade('notice');", 15000)
-	  </script>
-	<% end %>
+	<b>	
+	<% if current_user %>
+	<%= current_user.login %><br>
+	<%= link_to "odhlásit", logout_path %>
+	<% else %>
+	neprihlasen<br>
+	<%= link_to "přihlásit", login_path %>
+	<% end%>
+	</b>
 </div>
 <div id="menu_container">
 <ul class="vertical_menu">
@@ -30,9 +31,18 @@
 <li class="vertical_menu"><%= link_to "Program", program_path, :class => "vertical_menu" %></li>
 <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", "contact.html", :class => "vertical_menu" %></li>
 <li class="vertical_menu"><%= link_to "O nás", actors_path, :class=> "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "Uživatelé", users_path, :class => "vertical_menu" %></li>
 </div>
 </div>
 <div id="content_container">
+<% if flash[:warning] or flash[:notice] %>
+  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
+    <%= flash[:warning] || flash[:notice] %>
+  </div>
+  <script type="text/javascript">
+    setTimeout("new Effect.Fade('notice');", 15000)
+  </script>
+<% end %>
 <%= yield %>
 </div>	
 </div>
