@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   
   def require_admin
     if current_user
-      if current_user.role = Role.find_by_name "admin"
+      if current_user.role = Role.find_by_name("admin")
         return true
       end
     end

@@ -56,6 +56,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :concerts
   map.resources :users
   map.resources :roles
+  map.resources :clubs
   
   map.about_us 'onas', :controller => 'actors', :action => 'index'
 

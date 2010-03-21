@@ -1,0 +1,10 @@
+<%= link_to "Nový", new_club_path %>
+<% for club in @clubs %>
+<div class="club">
+	<%= link_to "Edit", edit_club_path(club.id) %> 
+	<%= link_to "Smazat", club_path(club.id), :method => "delete" %> 
+	<div class="club_name">
+		<%= club.name %>
+	</div>
+</div>
+<% end %>
