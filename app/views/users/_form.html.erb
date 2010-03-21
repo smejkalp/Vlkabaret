@@ -1,27 +1,23 @@
-<% form_for @user do |f| -%>
 	<%= f.label :firstName, "Jméno" %><br>
-	<%= f.text_field :firstName %><br>
+	<%= form.text_field :firstName %><br>
 <br>
-	<%= f.label :lastName, "Příjmení" %><br>
-	<%= f.text_field :lastName %><br>
+	<%= form.label :lastName, "Příjmení" %><br>
+	<%= form.text_field :lastName %><br>
 <br>
-	<%= f.label :email, "E-mail" %><br>
-	<%= f.text_field :email %><br>
+	<%= form.label :email, "E-mail" %><br>
+	<%= form.text_field :email %><br>
 <br>
-	<%= f.label :login, "Login" %><br>
-	<%= f.text_field :login %><br>
+	<%= form.label :login, "Login" %><br>
+	<%= form.text_field :login %><br>
 <br>
-	<%= f.label :password, "Heslo" %><br>
-	<%= f.password_field :password %><br>
+	<%= form.label :password, "Heslo" %><br>
+	<%= form.password_field :password %><br>
 <br>
-	<%= f.label :password_confirmation, "Heslo (znovu)" %><br>
-	<%= f.password_field :password_confirmation %><br>
+	<%= form.label :password_confirmation, "Heslo (znovu)" %><br>
+	<%= form.password_field :password_confirmation %><br>
 <br>
-	<%= f.label :role_id, "Role" %>
-	<%= f.collection_select :role_id, Role.all(), :id, :name %>
+	<%= form.label :role_id, "Role" %>
+	<%= form.collection_select :role_id, Role.all(), :id, :name %>
 <br>
-	<%= f.label :info, "Info" %><br>
-	<%= f.text_area :info %><br>
-<br>
-<%= f.submit "Vytvořit", :disable_with => 'Vytvářím...' %>
-<% end -%>
+	<%= form.label :info, "Info" %><br>
+	<%= form.text_area :info %><br>

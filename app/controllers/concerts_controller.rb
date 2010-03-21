@@ -39,6 +39,7 @@ class ConcertsController < ApplicationController
   def destroy
     @concert = Concert.find(params[:id])
     @concert.destroy
+    redirect_to concerts_path
   end
 
 end

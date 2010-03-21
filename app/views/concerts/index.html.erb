@@ -1,7 +1,7 @@
 <% for concert in @concerts%>
 <div class="concert">
 <div>
-	<%= link_to 'Edit', edit_concert_path(concert) %>
+	<% if current_user %><%= link_to 'Edit', edit_concert_path(concert) %><% end %>
 </div>
 <div class="concert_name"><h3><%=h concert.name%></h3></div>
 <div class="concert_time"><%=h concert.date_str%>, <%=h concert.time_range_str%></div>
