@@ -1,3 +1,4 @@
+<h2>Úvod</h2>
 <div id="first_page">
 <h3>Vlkabaret</h3>
 <p class="little_value">
@@ -9,10 +10,14 @@ Mezi šansonovou melancholií a drastickou komikou.
 <% if (@news.size > 0 || current_user) %>
 <h3 class="top_margin">Novinky</h3>
 <div class="news">
+<% if is_admin %>
 <%= link_to "Nová", new_news_path %><br><br>
+<% end %>
 <% for news in @news %>
 <div class="news">
-	<%= link_to "Edit", edit_news_path(news.id) %> <%= link_to "Smazat", news_path(news.id), :method => "delete" %>
+	<% if is_admin %>
+		<%= link_to "Edit", edit_news_path(news.id) %> <%= link_to "Smazat", news_path(news.id), :method => "delete" %>
+	<% end %>
 	<div class="news_header"><%=h news.header %></div>
 	<div class="news_body"><%=h news.body %></div>
 </div>

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   filter_parameter_logging :password, :password_confirmation
-  helper_method :current_user_session, :current_user
+  helper_method :current_user_session, :current_user, :is_admin
 
   private
       
@@ -21,6 +21,11 @@ class ApplicationController < ActionController::Base
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.user
+  end
+  
+  def is_admin
+    return false unless current_user
+    return (@current_user.role.name == "admin")
   end
   
   def require_admin

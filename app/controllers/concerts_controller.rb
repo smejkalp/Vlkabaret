@@ -8,7 +8,7 @@ class ConcertsController < ApplicationController
   end
 
   def create
-    @concert = params[:concert]
+    @concert = Concert.new(params[:concert])
     if @concert.save
       flash[:notice] = "Koncert byl úspěšně vložen."
     else 

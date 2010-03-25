@@ -1,14 +1,15 @@
-<div>
-<%= link_to 'Nová', new_role_path() %>
-</div>
-<br><br>
-<% for role in @roles%>
-
-<div class="user">
-<div>
-	<%= link_to 'Edit', edit_role_path(role) %>
-	<% if role.users.size == 0 %><%= link_to 'Smazat', role_path(role), :method => "delete" %><% end %>
-</div>
-<div class="user_name"><%=h role.name %></div>
+<% if is_admin %>
+	<div>
+	<%= link_to 'Nová', new_role_path() %>
+	</div>
+	<br><br>
+<% end %>
+<% for role in @roles %>
+<div class="role">
+<%=h role.name %>
+<% if is_admin %>
+<%= link_to 'Edit', edit_role_path(role) %>
+<% if role.users.size == 0 %><%= link_to 'Smazat', role_path(role), :method => "delete" %><% end %>
+<% end %>
 </div>
 <% end %>

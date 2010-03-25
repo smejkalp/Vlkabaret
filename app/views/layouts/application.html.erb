@@ -26,7 +26,7 @@
 <div id="menu_container">
 <ul class="vertical_menu">
 <li class="vertical_menu"><%= link_to "Úvod", root_path, :class => "vertical_menu" %></li>
-<li class="vertical_menu"><%= link_to "Program", program_path, :class => "vertical_menu" %></li>
+<li class="vertical_menu"><%= link_to "Koncerty", program_path, :class => "vertical_menu" %></li>
 <li class="vertical_menu" id="contact"> <%= link_to "Kontakt", contacts_path, :class => "vertical_menu" %></li>
 <li class="vertical_menu"><%= link_to "O nás", about_us_path, :class=> "vertical_menu" %></li>
 <% if current_user %>
@@ -37,14 +37,6 @@
 </div>
 </div>
 <div id="content_container">
-<% if flash[:warning] or flash[:notice] %>
-  <div id="notice" <% if flash[:warning] %>class="warning"<% end %>>
-    <%= flash[:warning] || flash[:notice] %>
-  </div>
-  <script type="text/javascript">
-    setTimeout("new Effect.Fade('notice');", 15000)
-  </script>
-<% end %>
 <%= yield %>
 </div>	
 </div>

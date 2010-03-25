@@ -98,7 +98,7 @@ div.news{
 	margin-bottom: 20px;
 }
 div.concert{
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 div.concert_name{
 /*	font-weight: bold;
@@ -120,13 +120,15 @@ div.concert_time{
 div.news_header{
 	padding: 0;
 	margin: 0;
-	margin-bottom: 5px;
+	margin-left: 3px;
 	font-weight: bold;
 	text-decoration: none;
 }
 div.news_body{
 	font-style: italic;
-	margin-bottom: 5px;
+	margin-bottom: 40px;
+	margin-left: 3px;
+	
 }
 div.club{
 	margin: 30px;
