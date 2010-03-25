@@ -11,10 +11,11 @@ class NewsController < ApplicationController
     @news = News.new(params[:news])
     if @news.save
       flash[:notice] = 'Novinka byla úspěšně vložena.'
+      redirect_to news_index_path
     else
       flash[:notice] = 'Nastala chyba při vkládání novinky!'
+      render :action => "edit"
     end
-    redirect_to :action => "index"
   end
 
   def edit
@@ -30,6 +31,7 @@ class NewsController < ApplicationController
     
     if @news.update_attributes(params[:news])
       flash[:notice] = "Novinka úspěšně upravena."
+      redirect_to news_index_path
     else
       render :action => "edit"
     end
@@ -38,7 +40,8 @@ class NewsController < ApplicationController
   def destroy
     @news = News.find(params[:id])
     @news.destroy
-    redirect_to :action => "index"
+    flash[:notice] = "Novinka úspěšně odstraněna."
+    redirect_to news_path
   end
 
 end

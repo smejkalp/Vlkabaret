@@ -52,11 +52,16 @@ ActionController::Routing::Routes.draw do |map|
   map.contacts 'kontakty', :controller => "contacts", :action => "index"  
     
   map.resources :actors
-  map.resource :news
   map.resources :concerts
   map.resources :users
   map.resources :roles
   map.resources :clubs
+  
+  #map.new_news 'news/new', :controller => 'news', :action => 'new'
+  #map.edit_news 'news/edit', :controller => 'news', :action => 'edit'
+  #map.delete_news 'news/delete',:controller => 'news', :action => 'destroy'
+  #map.news 'news', :controller => 'news', :action => 'index'
+  map.resources :news
   
   map.about_us 'onas', :controller => 'actors', :action => 'index'
 

@@ -5,9 +5,10 @@ Hudebně-divadelní pásmo sestávající převážně z autorských písní. Vy
 Mezi šansonovou melancholií a drastickou komikou.
 </div>
 <h3 class="top_margin">Novinky</h3>
-
+<%= link_to "Nová", new_news_path %><br><br>
 <% for news in @news %>
 <div class="news">
+	<%= link_to "Edit", edit_news_path(news.id) %> <%= link_to "Smazat", news_path(news.id), :method => "delete" %>
 	<div class="news_header"><%=h news.header %></div>
 	<div class="news_body"><%=h news.body %></div>
 </div>

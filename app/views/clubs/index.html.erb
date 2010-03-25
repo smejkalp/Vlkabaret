@@ -2,7 +2,8 @@
 <% for club in @clubs %>
 <div class="club">
 	<%= link_to "Edit", edit_club_path(club.id) %> 
-	<%= link_to "Smazat", club_path(club.id), :method => "delete" %> 
+	<%= link_to "Smazat", club_path(club.id), :method => "delete" %>
+	<%= link_to "Detail", club_path(club.id) %>
 	<div class="club_name">
 		<%= club.name %>
 	</div>

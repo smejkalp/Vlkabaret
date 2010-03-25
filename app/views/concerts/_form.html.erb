@@ -1,7 +1,24 @@
-<%= f.label :name, "Název" %><%= f.text_field :name %><br>
-<%= f.label :info, "Info" %><br><%= f.text_area :info %><br>
-<%= f.label :price, "Cena [Kč]" %><%= f.text_field :price %><br>
-<%= f.label :date, "Datum:" %><%= f.text_field :date %><br>
-<%= f.label :start_time, "Začátek" %><%= f.text_field :start_time %><br>
-<%= f.label :end_time, "Konec" %><%= f.text_field :end_time %><br>
+<% form_for @concert do |f| -%>
+<%= f.label :name, "Název" %><br>
+<%= f.text_field :name %><br>
+<br>
+<%= f.label :info, "Info" %><br>
+<%= f.text_area :info %><br>
+<br>
+<%= f.label :club_id, "Místo" %><br>
+<%= f.collection_select :club_id, Club.all(), :id, :name %>
+<br>
+<%= f.label :price, "Cena [Kč]" %><br>
+<%= f.text_field :price %><br>
+<br>
+<%= f.label :date, "Datum" %><br>
+<%= f.text_field :date %><br>
+<br>
+<%= f.label :start_time, "Začátek" %><br>
+<%= f.text_field :start_time %><br>
+<br>
+<%= f.label :end_time, "Konec" %><br>
+<%= f.text_field :end_time %><br>
+<br>
 <%= f.submit "Uložit", :disable_with => 'Ukládám...' %>
+<% end -%>
