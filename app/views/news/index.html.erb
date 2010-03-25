@@ -1,10 +1,14 @@
 <div id="first_page">
 <h3>Vlkabaret</h3>
+<p class="little_value">
 Bufetová nostalgie v bílém baretu pivního džbánu. Kabaret, který vyudí koleno barové zpěvačky Christiany Morgensternové. Ostrost rosí jelení lůj na frontě. Jeho jazyk setře prach z čínské zdi. Nad orchestrem visí: zapal sobě.
 Hudebně-divadelní pásmo sestávající převážně z autorských písní. Vycházíme z tradice českého, německého a francouzského kabaretu. V představení se setkají postavy zestárlé baletky, žoviálního cestovatele, barové zpěvačky, klauna, herce čínské opery, ženy středních let, hospodských šviháků, pianisty z jiného světa a další.
 Mezi šansonovou melancholií a drastickou komikou.
+</p>
 </div>
+<% if (@news.size > 0 || current_user) %>
 <h3 class="top_margin">Novinky</h3>
+<div class="news">
 <%= link_to "Nová", new_news_path %><br><br>
 <% for news in @news %>
 <div class="news">
@@ -12,4 +16,7 @@ Mezi šansonovou melancholií a drastickou komikou.
 	<div class="news_header"><%=h news.header %></div>
 	<div class="news_body"><%=h news.body %></div>
 </div>
+
 <% end %>
+<% end %>
+</div>

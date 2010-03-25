@@ -1,12 +1,30 @@
+<div class="back">
+<%= link_to "Zpět", concerts_path %>
+<br><br>
+</div>
+
 <div class="club">
 
 <div class="club_name">
 	<%= @club.name %>
 </div>
 <div class="club_info">
-<% unless @club.www.nil? %>
+	<p class="little_label" >adresa: </p>
+	<p class="little_value" >
+		<%= @club.address %>
+	</p>
+	<p class="little_label" >telefon: </p>
+	<p class="little_value" >
+		<%= @club.phone %>		
+	</p>
+<% unless @club.www_http.nil? %>
 	<p>
 		<a href="<%= @club.www_http %>" target="_blank">web page</a>
+	</p>
+<% end %>
+<% unless @club.map_link_http.nil? %>
+	<p>
+		<a href="<%= @club.map_link_http %>" target="_blank">mapa</a>
 	</p>
 <% end %>
 </div>	

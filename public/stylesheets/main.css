@@ -1,10 +1,9 @@
 body{
-	font: 11px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
-	color: #eeeeee;
+	font: 10px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
+	color: #CCCCCC;
 	background-color: #000000;
 }
 #main_container{
-	background-color: #000000;
 	width: 600px;
 	height: 600px;
 	margin: auto;
@@ -21,7 +20,6 @@ body{
 	background-repeat: no-repeat;
 }
 #header_container{
-	font-size: 8px;
 	margin-left: 370px;
 }
 #header_line{
@@ -30,7 +28,6 @@ body{
 }
 #menu_container{
 	position: absolute;
-	font-size: 12px;
 	top: 140px;
 }
 #content_container{
@@ -43,17 +40,17 @@ body{
 h1{
 	margin:0;
 	padding:0;
-	color: #ffffff;
-	font-size: 30px;
+	color: #EBEBEB;
+	font-size: 12px;
 	font-family: Verdana;
 	text-transform: capitalize;
 }
 h3{
 	font-weight: bold;
-	font-size: 11px;
 	margin: 0;
+	color: #EBEBEB;
 	margin-bottom: 10px;
-	text-decoration: underline;
+	//text-decoration: underline;
 }
 h3.top_margin{
 	margin-top: 20px;
@@ -73,15 +70,26 @@ li.vertical_menu{
 	padding-left: 35px;
 }
 
-a.vertical_menu:link, a.vertical_menu:visited{
+a:link, a:visited{
+	color: #EBEBEB;
 	font-weight:normal;
-	color:#FFFFFF;
-	text-decoration:none;
-	font-weight: normal;
 }
-a.vertical_menu:hover, a.vertical_menu:active{
+
+a:hover, a:active {
+	text-decoration:underline;
+} 
+
+a.vertical_menu{
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.vertical_menu:hover{
 	text-decoration: underline;
+	font-weight: bold;
 }
+
 div.news{
 /*	border: 1px solid #ffffff;
 	background-color: #220000;
@@ -99,7 +107,6 @@ div.concert_name{
 */
 }
 div.concert_info{
-	color: #999999;
 	font-style: italic;
 	margin-bottom: 5px;
 }
@@ -108,8 +115,7 @@ div.concert_price{
 }
 div.concert_time{
 	margin-bottom: 5px;
-	padding: 0;
-	font-size: 11px;
+	padding: 0px;
 }
 div.news_header{
 	padding: 0;
@@ -119,9 +125,27 @@ div.news_header{
 	text-decoration: none;
 }
 div.news_body{
-	color: #999999;
 	font-style: italic;
 	margin-bottom: 5px;
+}
+div.club{
+	margin: 30px;
+}
+div.club_name{
+	font-weight: bold;
+}
+div.club_info{
+	border-top: 1px solid #999999;
+	padding: 10px;
+	padding-top: 0px;
+}
+p.little_label{
+	margin-top: 10px;
+}
+p.little_value{
+	margin: 1px;
+	padding-left: 3px;
+	
 }
 #first_page{
 	margin-bottom: 20px;

@@ -41,7 +41,7 @@ class NewsController < ApplicationController
     @news = News.find(params[:id])
     @news.destroy
     flash[:notice] = "Novinka úspěšně odstraněna."
-    redirect_to news_path
+    redirect_to news_index_path
   end
 
 end

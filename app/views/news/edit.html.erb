@@ -1,1 +1,21 @@
-<%= render :partial => "form"%>
+<% form_for @news, :url => news_path do |f|  -%>
+	<p>
+		<%= f.label :header, "Nadpis" %><br>
+		<%= f.text_field :header %>
+	</p>
+	<p>
+		<%= f.label :body, "Tělo" %><br>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.label :valid_from, "Zobrazovat od" %><br>
+		<%= f.text_field :valid_from %>
+	</p>
+	<p>
+		<%= f.label :valid_until, "Zobrazovat do" %><br>
+		<%= f.text_field :valid_until %>
+	</p>
+	<p>
+		<%= f.submit "Uložit", :disable_with => 'Ukládám...'  %>
+	</p>
+<% end -%>
