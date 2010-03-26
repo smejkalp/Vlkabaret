@@ -14,20 +14,13 @@
 <div id="top_container">
 <div id="header_container">
 	<h1>Vlkabaret</h1>
-	<br>
-	<% if current_user %>
-	<%= current_user.login %> 
-	<%= link_to "odhlásit", logout_path %>
-	<% else %>
-	<%= link_to "přihlásit", login_path %>
-	<% end%>
 </div>
 <div id="menu_container">
 <ul class="vertical_menu">
 <li class="vertical_menu"><%= link_to "Úvod", root_path, :class => "vertical_menu" %></li>
 <li class="vertical_menu"><%= link_to "Program", program_path, :class => "vertical_menu" %></li>
-<li class="vertical_menu" id="contact"> <%= link_to "Kontakt", contacts_path, :class => "vertical_menu" %></li>
 <li class="vertical_menu"><%= link_to "O nás", about_us_path, :class=> "vertical_menu" %></li>
+<li class="vertical_menu"> <%= link_to "Kontakt", contacts_path, :class => "vertical_menu" %></li>
 <% if current_user %>
 	<li class="vertical_menu"><%= link_to "Uživatelé", users_path, :class => "vertical_menu" %></li>
 	<li class="vertical_menu"><%= link_to "Role", roles_path, :class => "vertical_menu" %></li>
@@ -38,6 +31,14 @@
 <div id="content_container">
 <%= yield %>
 </div>	
+<div class="login">
+<% if current_user %>
+<%= current_user.login %> 
+<%= link_to "odhlásit", logout_path %>
+<% else %>
+<%= link_to "přihlásit", login_path %>
+<% end%>
+</div>
 </div>
 </body>
 </html>
