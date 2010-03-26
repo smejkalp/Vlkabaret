@@ -1,5 +1,5 @@
 body{
-	font: 10px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
+	font: 12px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
 	color: #CCCCCC;
 	background-color: #000000;
 }
@@ -16,14 +16,14 @@ body{
 	padding-top: 10px;
 	margin: 0px;
 	margin-left: 20px;
-	border-bottom: 1px solid #111111;
+	border-bottom: 2px solid #111111;
 
 	background-image: url("../images/banner_small_refl.jpg");
-	background-position: 0px 10px;
+	background-position: right 10px;
 	background-repeat: no-repeat;
 }
 #header_container{
-	text-align: right;
+	text-align: left;
 	padding: 0px;
 	margin-right: 0px;
 }
@@ -41,6 +41,32 @@ body{
 	padding: 45px;
 	padding-top: 0;
 }
+
+h1{
+	margin:0;
+	padding:0;
+	color: #EBEBEB;
+	font-size: 60px;
+	font-family: Verdana;
+	text-transform: capitalize;
+}
+h2{
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+h3{
+	font-weight: bold;
+	margin: 0;
+	color: #EBEBEB;
+	font-size: 14px;
+	margin-bottom: 10px;
+	//text-decoration: underline;
+}
+h3.top_margin{
+	margin-top: 80px;
+}
 input{
 	background-color: #cccccc;
 	border: 1px solid #999999;
@@ -50,24 +76,6 @@ textarea{
 	border: 1px solid #999999;
 }
 
-h1{
-	margin:0;
-	padding:0;
-	color: #EBEBEB;
-	font-size: 35px;
-	font-family: Verdana;
-	text-transform: capitalize;
-}
-h3{
-	font-weight: bold;
-	margin: 0;
-	color: #EBEBEB;
-	margin-bottom: 10px;
-	//text-decoration: underline;
-}
-h3.top_margin{
-	margin-top: 20px;
-}
 ul.vertical_menu{
 	list-style-type:none;
 	margin:0;
@@ -89,7 +97,7 @@ a:hover, a:active {
 } 
 
 a.vertical_menu{
-	font-size: 11px;
+	font-size: 13px;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -98,16 +106,26 @@ a.vertical_menu:hover{
 	text-decoration: underline;
 	font-weight: bold;
 }
+a.admin{
+	font-size: 10px;
+	color: #CC6600;
+}
 
 div.news{
-/*	border: 1px solid #ffffff;
-	background-color: #220000;
-*/
+	/* border-top: 1px solid #111111;
+	background-color: #111111;
+	
+	padding-top: 30px;
 	width: 100%;
+	margin-bottom: 20px; */
+	margin-top: 10px;
+	padding: 10px;
+}
+div.user{
 	margin-bottom: 20px;
 }
 div.concert{
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 div.concert_name{
 /*	font-weight: bold;
@@ -126,6 +144,9 @@ div.concert_time{
 	margin-bottom: 5px;
 	padding: 0px;
 }
+div.concert_club{
+	
+}
 div.news_header{
 	padding: 0;
 	margin: 0;
@@ -140,7 +161,7 @@ div.news_body{
 	
 }
 div.club{
-	margin: 30px;
+	margin-bottom: 30px;
 }
 div.club_name{
 	font-weight: bold;
@@ -150,6 +171,17 @@ div.club_info{
 	padding: 10px;
 	padding-top: 0px;
 }
+div.about_us{
+	margin: 0px;
+	padding: 0px;
+}
+div.about_us_par1{
+	margin-bottom: 30px;
+}
+div.about_us_par2{
+	margin-bottom: 0px;
+}
+
 p.little_label{
 	margin-top: 10px;
 }
@@ -168,7 +200,7 @@ div.login{
 	/* background-color: #111111; */
 }
 div.actors{
-	margin-top: 50px;
+	margin-top: 0px;
 }
 #first_page{
 	margin-bottom: 20px;

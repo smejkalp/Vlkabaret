@@ -1,4 +1,4 @@
-<h1>Login</h1>
+<h2>Přihlášení</h2>
  
 <% form_for @user_session, :url => "create_session" do |f| %>
   <%= f.error_messages %>
@@ -10,5 +10,5 @@
   <br />
   <%= f.check_box :remember_me %><%= f.label :remember_me %><br />
   <br />
-  <%= f.submit "Login" %>
+  <%= f.submit "Přihlásit" %>
 <% end %>

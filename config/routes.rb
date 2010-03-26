@@ -41,7 +41,6 @@ ActionController::Routing::Routes.draw do |map|
   #map.root :controller => 'news'
   
   map.root :controller => "news", :action => "index"
-  map.contact 'kontakt', :controller => 'main', :action => 'contact' 
   map.program 'program', :controller => 'concerts', :action => 'index'
   
   map.login 'login', :controller => 'user_sessions', :action => 'new'
@@ -49,7 +48,7 @@ ActionController::Routing::Routes.draw do |map|
     
   map.create_session 'create_session', :controller => 'user_sessions', :action => 'create'  
   
-  map.contacts 'kontakty', :controller => "contacts", :action => "index"  
+  map.contacts 'kontakt', :controller => "contacts", :action => "index"  
     
   map.resources :actors
   map.resources :concerts

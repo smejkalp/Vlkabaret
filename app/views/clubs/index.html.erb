@@ -1,10 +1,10 @@
 <h2>Kluby</h2>
-<%= link_to "Nový", new_club_path %><br><br>
+<%= link_to "Nový", new_club_path, :class => "admin" %>
+<br><br>
 <% for club in @clubs %>
 <div class="club">
-	<%= link_to "Edit", edit_club_path(club.id) %> 
-	<%= link_to "Smazat", club_path(club.id), :method => "delete" %>
-	<%= link_to "Detail", club_path(club.id) %>
+	<%= link_to "Edit", edit_club_path(club.id), :class => "admin" %> 
+	<%= link_to "Smazat", club_path(club.id), :method => "delete", :class => "admin" %>
 	<div class="club_name">
 		<%= club.name %>
 	</div>

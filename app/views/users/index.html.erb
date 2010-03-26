@@ -1,11 +1,14 @@
-<%= link_to 'Nový', new_user_path %>
+<h2>Uživatelé</h2>
+<% if is_admin %><div><%= link_to 'Nový', new_user_path, :class => "admin" %><br></div><% end %>
 <% for user in @users%><br>
 <div class="user">
+<% if is_admin %>
 <div>
-	<%= link_to 'Edit', edit_user_path(user) %>
-	<%= link_to 'Smazat', user_path(user), :method => "delete" %>
+	<%= link_to 'Edit', edit_user_path(user), :class => "admin" %>
+	<%= link_to 'Smazat', user_path(user), :method => "delete", :class => "admin" %>
 </div>
+<% end %>
 <div class="user_name"><h3><%=h user.firstName%> <%=h user.lastName%></h3></div>
-<div class="user_info"><%=h user.info%>
+<div class="user_info"><%=h user.info%></div>
 </div>
 <% end %>

@@ -1,15 +1,15 @@
 <% if is_admin %>
 	<div>
-	<%= link_to 'Nová', new_role_path() %>
+	<%= link_to 'Nová', new_role_path(), :class => "admin" %>
 	</div>
-	<br><br>
+	<br>
 <% end %>
 <% for role in @roles %>
 <div class="role">
 <%=h role.name %>
 <% if is_admin %>
-<%= link_to 'Edit', edit_role_path(role) %>
-<% if role.users.size == 0 %><%= link_to 'Smazat', role_path(role), :method => "delete" %><% end %>
+<%= link_to 'Edit', edit_role_path(role), :class => "admin"%>
+<% if role.users.size == 0 %><%= link_to 'Smazat', role_path(role), :method => "delete", :class => "admin" %><% end %>
 <% end %>
 </div>
 <% end %>
