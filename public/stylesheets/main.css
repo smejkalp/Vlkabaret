@@ -10,17 +10,17 @@ body{
 	padding: 0px;
 }
 #top_container{
-	height: 131px;
+	height: 220px;
 	padding: 20px;
-	padding-top: 40px;
+	padding-top: 50px;
 	padding-bottom: 0;
 	margin: 0px;
-	background-image: url("../images/bar_30.jpg");
+	background-image: url("../images/banner_refl.jpg");
 	background-position: top left;
 	background-repeat: no-repeat;
 }
 #header_container{
-	margin-left: 370px;
+	margin-left: 470px;
 }
 #header_line{
 	padding: 0;
@@ -28,7 +28,7 @@ body{
 }
 #menu_container{
 	position: absolute;
-	top: 140px;
+	top: 210px;
 }
 #content_container{
 	height: 100%;
@@ -41,7 +41,7 @@ h1{
 	margin:0;
 	padding:0;
 	color: #EBEBEB;
-	font-size: 34px;
+	font-size: 40px;
 	font-family: Verdana;
 	text-transform: capitalize;
 }
