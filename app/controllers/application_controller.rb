@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   
   def is_admin
     return false unless current_user
-    return (@current_user.role.name == "admin")
+    return (@current_user.role.name == "admin" || @current_user.role.name == "herec")
   end
   
   def require_admin
