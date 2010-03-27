@@ -1,6 +1,6 @@
 body{
 	font: 12px Verdana, "Lucida Grande", "Trebuchet MS", sans-serif;
-	color: #CCCCCC;
+	color: #999999;
 	background-color: #000000;
 }
 #main_container{
@@ -44,12 +44,13 @@ body{
 h1{
 	margin:0;
 	padding:0;
-	color: #EBEBEB;
+	color: #EEEEEE;
 	font-size: 60px;
 	font-family: Verdana;
 	text-transform: capitalize;
 }
 h2{
+	color: #EEEEEE;
 	margin-top: 20px;
 	font-weight: bold;
 	font-size: 18px;
@@ -58,7 +59,7 @@ h2{
 h3{
 	font-weight: bold;
 	margin: 0;
-	color: #EBEBEB;
+	color: #EEEEEE;
 	font-size: 14px;
 	margin-bottom: 10px;
 	//text-decoration: underline;
@@ -159,6 +160,10 @@ div.news_body{
 	margin-left: 3px;
 	
 }
+div.about_us_picture{
+	text-align: center;
+	margin-bottom: 30px;
+}
 div.club{
 	margin-bottom: 30px;
 }
@@ -175,11 +180,20 @@ div.about_us{
 	padding: 0px;
 }
 div.about_us_par1{
-	margin-bottom: 30px;
+
 }
 div.about_us_par2{
-	margin-bottom: 0px;
+	margin-bottom: 20px;
+	font-weight: bold;
 }
+div.about_us_par3{
+	margin-bottom: 50px;
+}
+div.about_us_picture{
+	text-align: center;
+	margin: 50px;
+}
+
 
 p.little_label{
 	margin-top: 10px;
