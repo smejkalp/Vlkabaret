@@ -54,7 +54,7 @@ h2{
 	margin-top: 20px;
 	font-weight: bold;
 	font-size: 18px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 h3{
 	font-weight: bold;
@@ -118,8 +118,8 @@ div.news{
 	padding-top: 30px;
 	width: 100%;
 	margin-bottom: 20px; */
-	margin-top: 10px;
-	padding: 10px;
+	margin-top: 0px;
+	padding: 0px;
 }
 div.user{
 	margin-bottom: 20px;
