@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   def index
-    @news = News.find(:all, :order => "created_at ASC")
+    @news = News.find(:all, :order => "created_at DESC")
   end
 
   def new

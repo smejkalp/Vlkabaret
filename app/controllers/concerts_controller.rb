@@ -1,6 +1,6 @@
 class ConcertsController < ApplicationController
   def index
-    @concerts = Concert.find(:all)
+    @concerts = Concert.find(:all, :order => "date DESC", :limit => 5)
   end
 
   def new
