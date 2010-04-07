@@ -1,6 +1,9 @@
 class ConcertsController < ApplicationController
   def index
-    @concerts = Concert.find(:all, :order => "date DESC")
+    @concerts_past = Concert.find(:all, :order => "date DESC", :conditions => ['date <?', Date.today])
+    @concerts_today = Concert.find(:all, :order => "date DESC", :conditions => ['date =?', Date.today])
+    @concerts_future = Concert.find(:all, :order => "date DESC", :conditions => ['date >=?', Date.today])
+   
   end
 
   def new
