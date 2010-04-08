@@ -62,4 +62,22 @@ ActiveRecord::Schema.define(:version => 20100408160736) do
     t.datetime "updated_at"
   end
 
+  create_table "users", :force => true do |t|
+    t.string   "firstName"
+    t.string   "lastName"
+    t.string   "login"
+    t.string   "email"
+    t.text     "info"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_salt"
+    t.string   "crypted_password"
+    t.string   "persistence_token"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
 end

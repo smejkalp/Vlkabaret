@@ -1,21 +1,34 @@
 <% if is_admin %>
 <%= link_to "Nová", new_photo_path, :class => "admin" %><br><br>
+<% end %> 
+<% i = 0 %>   
+<% per_row = 5.0 %>
+<table>
+<% (@photos.length / per_row).ceil.times do %>  
+ 	<tr>
+	<% for column in 1..per_row  %>
+		<% if i < @photos.length %>
+			<td class="photo_thumb">
+	 			<div class="photo">
+					<div class="photo_name">
+						<%= @photos[i].name %>
+					</div> 
+					<% if is_admin %> 
+					<div class="photo_admin">
+						<%= link_to "Edit", edit_photo_path(@photos[i].id), :class => "admin" %> <%= link_to "Smazat", photo_path(@photos[i].id), :method => "delete", :class => "admin" %>
+					</div>  
+					<% end %>              
+					<div class="photo_image">
+			            <a href="<%= photo_path(@photos[i].id)%>"><%= image_tag @photos[i].image.url(:thumb) %></a>
+					</div>
+					<div class="photo_description">
+						<%= @photos[i].description %>
+					</div>
+				</div>  
+			</td> 
+		<% end %>
+   		<% i += 1 %>
+   <% end %> 
+   </tr>                       
 <% end %>
-<% for photo in @photos %>
-	<div class="photo">
-		<div class="photo_name">
-			<%= photo.name %>
-		</div> 
-		<% if is_admin %> 
-		<div class="photo_admin">
-			<%= link_to "Edit", edit_photo_path(photo.id), :class => "admin" %> <%= link_to "Smazat", photo_path(photo.id), :method => "delete", :class => "admin" %>
-		</div>  
-		<% end %>              
-		<div class="photo_image">
-            <%= image_tag photo.image.url(:thumb) %>
-		</div>
-		<div class="photo_description">
-			<%= photo.description %>
-		</div>
-	</div>                          
-<% end %>
+</table> 

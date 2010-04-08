@@ -1,5 +1,5 @@
-<% title @photo.name %>
+<%= @photo.name %>
 <br>
-<%= image_tag @photo.image.url(:normal) %>   
+<a href="<%= photos_path%>"><%= image_tag @photo.image.url(:normal) %></a>
 <br>
-<% = @photo.description%>
+<%= @photo.description%>

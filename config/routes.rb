@@ -49,6 +49,7 @@ ActionController::Routing::Routes.draw do |map|
   map.create_session 'create_session', :controller => 'user_sessions', :action => 'create'  
   
   map.contacts 'kontakt', :controller => "contacts", :action => "index"  
+  map.galery 'galerie', :controller => "photos", :action => "index"  
     
   map.resources :actors
   map.resources :concerts

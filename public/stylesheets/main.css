@@ -239,6 +239,10 @@ h3.concert_name{
 	margin: 0px;
 	padding:3px;
 	padding-bottom: 5px;
+} 
+
+td.photo_thumb{
+	vertical-align: top;
 }
 
 

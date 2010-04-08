@@ -5,14 +5,15 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
-navst = Role.create(:name => 'guest')
-member = Role.create(:name => 'member')
+guest = Role.create(:name => 'guest')
+actor = Role.create(:name => 'actor')
+admin = Role.create(:name => 'admin')
 
-User.create(:firstName =>'Alžběta', :lastName => 'Kostrhounová', :role_id => member.id, :login => 'alzbeta', :password => 'kostr', :password_confirmation => 'kostr')
-User.create(:firstName =>'Jakub', :lastName => 'Otčenášek', :role_id => member.id, :login => "jakub", :password => "otcen", :password_confirmation => "otcen")
-User.create(:firstName =>'Antonín', :lastName => 'Policar', :role_id => member.id, :login => "antonin", :password => "polic", :password_confirmation => "polic")
-User.create(:firstName =>'Marek', :lastName => 'Novák', :login => 'marek', :password => 'novak', :password_confirmation => "novak", :email => 'anoha@seznam.cz', :info => 'Takovej blbec no... nic moc jako, spis ho tak trpime...', :role_id => member.id)
-User.create(:firstName =>'Petr', :lastName => 'Smejkal', :login => 'petr', :password => 'smejk', :password_confirmation => "smejk", :email => 'xmejkal@gmail.com', :info => 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', :role_id => navst.id)
+User.create(:firstName =>'Alžběta', :lastName => 'Kostrhounová', :role_id => actor.id, :login => 'alzbeta', :password => 'kostr', :password_confirmation => 'kostr')
+User.create(:firstName =>'Jakub', :lastName => 'Otčenášek', :role_id => actor.id, :login => "jakub", :password => "otcen", :password_confirmation => "otcen")
+User.create(:firstName =>'Antonín', :lastName => 'Policar', :role_id => actor.id, :login => "antonin", :password => "polic", :password_confirmation => "polic")
+User.create(:firstName =>'Marek', :lastName => 'Novák', :login => 'marek', :password => 'novak', :password_confirmation => "novak", :email => 'anoha@seznam.cz', :info => 'Takovej blbec no... nic moc jako, spis ho tak trpime...', :role_id => actor.id)
+User.create(:firstName =>'Petr', :lastName => 'Smejkal', :login => 'petr', :password => 'smejk', :password_confirmation => "smejk", :email => 'xmejkal@gmail.com', :info => 'Je to kus dobryho kluk. Fakt se vyzna. A to ve vsem!!!', :role_id => admin.id)
 
 News.create(:header => 'Spuštění stránek', :body => 'Byla vytvořena první verze stránek kabaretního souboru Vlkabaret. Toto je první novinka.', :valid_from => ('January 16, 2010'))
 News.create(:header => 'Testovací novinka 1', :body => 'Tato novinka by se mela zobrazovat od 16.1.2010 do 17.1.2010', :valid_from => ('January 16, 2010'), :valid_until => ('January 17,2010'))
