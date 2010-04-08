@@ -2,8 +2,8 @@
 <%= link_to "Nová", new_photo_path, :class => "admin" %><br><br>
 <% end %> 
 <% i = 0 %>   
-<% per_row = 5.0 %>
-<table>
+<% per_row = 4.0 %>
+<table class="photo_thumbs">
 <% (@photos.length / per_row).ceil.times do %>  
  	<tr>
 	<% for column in 1..per_row  %>
@@ -16,7 +16,7 @@
 					</div>  
 					<% end %>              
 					<div class="photo_image">
-			            <a href="<%= photo_path(@photos[i].id)%>"><%= image_tag @photos[i].image.url(:thumb) %></a>
+			            <a href="<%= photo_path(@photos[i].id)%>" class="photo_thumb"><%= image_tag @photos[i].image.url(:thumb) %></a>
 					</div>
 				</div>  
 			</td> 

@@ -109,6 +109,10 @@ a.vertical_menu:hover{
 a.admin{
 	font-size: 10px;
 	color: #CC6600;
+}  
+
+a.photo_thumb:hover{
+	border-bottom: 2px solid #aaaaaa;
 }
 
 div.news{
@@ -243,7 +247,15 @@ h3.concert_name{
 
 td.photo_thumb{
 	vertical-align: top;
+	padding: 10px;
+}                       
+
+table.photo_thumbs{   
+	margin: 0px;
+	margin-top: 50px;
+	width: 100%;
 }
+    
 
 
 /*rounded corners*/

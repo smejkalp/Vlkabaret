@@ -6,6 +6,19 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
   end
+           
+  def show_gallery(concert_id)
+     @concert = Concert.find_by_id(concert_id)
+     @photos = @concert.photos
+     render :action => "index"
+  end
+     
+  def show_gallery_param
+     @concert = Concert.find_by_id(params[:id])
+     @photos = @concert.photos
+     render :action => "index"
+  end
+  
 
   def create
     @photo = Photo.new(params[:photo])

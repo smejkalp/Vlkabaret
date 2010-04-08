@@ -1,5 +1,6 @@
 class Concert < ActiveRecord::Base
   belongs_to :club, :foreign_key => "club_id"
+  has_many :photos
   
   def club_name
     self.club.name
