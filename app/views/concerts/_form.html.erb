@@ -12,7 +12,7 @@
 <%= f.text_field :price %><br>
 <br>
 <%= f.label :date, "Datum" %><br>
-<%= f.text_field :date %><br>
+<%= f.text_field :date, :onfocus => "showCalendarControl(this);" %><br>
 <br>
 <%= f.label :start_time, "Začátek" %><br>
 <%= f.text_field :start_time %><br>
