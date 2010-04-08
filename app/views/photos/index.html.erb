@@ -1,0 +1,13 @@
+<% for photo in @photos %>
+	<div class="photo">
+		<div class="photo_name">
+			<%= photo.name %>
+		</div>
+		<div class="photo_image">
+            <%= image_tag @photo.image.url %>
+		</div>
+		<div class="photo_description">
+			<%= photo.description %>
+		</div>
+	</div>                          
+<% end %>

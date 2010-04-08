@@ -54,7 +54,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :concerts
   map.resources :users
   map.resources :roles
-  map.resources :clubs
+  map.resources :clubs   
+  map.resources :photos
   
   #map.new_news 'news/new', :controller => 'news', :action => 'new'
   #map.edit_news 'news/edit', :controller => 'news', :action => 'edit'

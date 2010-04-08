@@ -16,4 +16,8 @@ class Concert < ActiveRecord::Base
   def date_str
     date.to_s(:date)
   end
+  
+  def name_date_str
+    self.name + ' - ' + date_str
+  end
 end
