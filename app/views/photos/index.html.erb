@@ -1,10 +1,18 @@
+<% if is_admin %>
+<%= link_to "Nová", new_photo_path, :class => "admin" %><br><br>
+<% end %>
 <% for photo in @photos %>
 	<div class="photo">
 		<div class="photo_name">
 			<%= photo.name %>
-		</div>
+		</div> 
+		<% if is_admin %> 
+		<div class="photo_admin">
+			<%= link_to "Edit", edit_photo_path(photo.id), :class => "admin" %> <%= link_to "Smazat", photo_path(photo.id), :method => "delete", :class => "admin" %>
+		</div>  
+		<% end %>              
 		<div class="photo_image">
-            <%= image_tag @photo.image.url %>
+            <%= image_tag photo.image.url(:thumb) %>
 		</div>
 		<div class="photo_description">
 			<%= photo.description %>

@@ -5,7 +5,7 @@
   </p>
   <p>
     <%= f.label :concert_id %><br />
-    <%= f.collection_select :concert_id, Concerts.all, :id, :name_date_str %>
+    <%= f.collection_select :concert_id, Concert.all, :id, :name_date_str %>
   </p>
   <p>
     <%= f.label :description %><br />
