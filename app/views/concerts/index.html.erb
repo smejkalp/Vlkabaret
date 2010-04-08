@@ -73,6 +73,11 @@
 	<b class="b1h_grey"></b><b class="b2h_grey"></b><b class="b3h_grey"></b><b class="b4h_grey"></b>
 	<div class="headh_grey">
 		<h3 class="concert_name"><%=h concert.name%></h3>
+		<% if concert.photos.length > 0 %> 
+		     <div class="photos_link">
+	         <%= link_to "FOTKY", concert_photos_path(:id => concert.id), :class => "photos_link" %>
+			 </div>
+		<% end %>       
 		<% if is_admin %>
 			<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
 		<% end %>

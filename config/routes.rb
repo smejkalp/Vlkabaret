@@ -51,7 +51,7 @@ ActionController::Routing::Routes.draw do |map|
   map.contacts 'kontakt', :controller => "contacts", :action => "index"  
   map.galery 'galerie', :controller => "photos", :action => "index"  
 
-  map.predstaveni 'galerie/predstaveni/:id', :controller => "photos", :action => "show_gallery_param"
+  map.concert_photos 'galerie/predstaveni/:id', :controller => "photos", :action => "show_gallery_param"
     
   map.resources :actors
   map.resources :concerts

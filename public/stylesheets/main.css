@@ -113,6 +113,18 @@ a.admin{
 
 a.photo_thumb:hover{
 	border-bottom: 2px solid #aaaaaa;
+}   
+a.photos_link{ 
+	text-decoration: underline;
+	font-weight: bold;
+	color: #DD4433;
+} 
+div.photos_link{  
+	width: 100%;  
+	position: relative;
+	top: -20px;
+	right: 10px;
+	text-align: right;
 }
 
 div.news{
