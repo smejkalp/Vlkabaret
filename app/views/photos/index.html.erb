@@ -10,9 +10,6 @@
 		<% if i < @photos.length %>
 			<td class="photo_thumb">
 	 			<div class="photo">
-					<div class="photo_name">
-						<%= @photos[i].name %>
-					</div> 
 					<% if is_admin %> 
 					<div class="photo_admin">
 						<%= link_to "Edit", edit_photo_path(@photos[i].id), :class => "admin" %> <%= link_to "Smazat", photo_path(@photos[i].id), :method => "delete", :class => "admin" %>
@@ -20,9 +17,6 @@
 					<% end %>              
 					<div class="photo_image">
 			            <a href="<%= photo_path(@photos[i].id)%>"><%= image_tag @photos[i].image.url(:thumb) %></a>
-					</div>
-					<div class="photo_description">
-						<%= @photos[i].description %>
 					</div>
 				</div>  
 			</td> 

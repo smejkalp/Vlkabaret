@@ -1,5 +1,8 @@
-<%= @photo.name %>
+<br><br>
 <br>
-<a href="<%= photos_path%>"><%= image_tag @photo.image.url(:normal) %></a>
-<br>
-<%= @photo.description%>
+<div style="text-align:center;">  
+	<h3><%= @photo.name %></h3>  
+	<a href="<%= photos_path%>"><%= image_tag @photo.image.url(:normal) %></a>
+	<br>
+	<%= @photo.description%>
+</div>
