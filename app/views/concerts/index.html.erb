@@ -1,99 +1,104 @@
 <h2>Program</h2>
 <% if is_admin %><%= link_to "Nový", new_concert_path, :class => "admin" %><br><br><% end %> 
-<br><br>dnes:___________________________________________<br><br>
+
+
 <% for concert in @concerts_today%>
-<div class="concert">
-
-	<% if is_admin %>
-		<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
-	<% end %>
-
-	<div class="concert_name">
-		<h3><%=h concert.name%></h3>
+<div class="concert_today">
+	<b class="b1h_red"></b><b class="b2h_red"></b><b class="b3h_red"></b><b class="b4h_red"></b>
+	<div class="headh_red">
+		<h3 class="concert_name"><%=h concert.name%> - DNES !!</h3>
+		<% if is_admin %>
+			<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
+		<% end %>
 	</div>
-	<div class="concert_time">
-		<%=h concert.date_str%>, <%=h concert.time_range_str%>
-	</div>
-	<div class="concert_info">
-		<%=h concert.info%>
-	</div>
-	
-	<% if concert.is_in_club? %>
-		<div class="concert_club">
-			<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+	<div class="contenth">
+		<div class="concert_time">
+			<%=h concert.date_str%>, <%=h concert.time_range_str%>
 		</div>
-	<% end %>
-	
-	<% if concert.price %>
-		<div class="concert_price">
-			<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+		<div class="concert_info">
+			<%=h concert.info%>
 		</div>
-	<% end %>
+	
+		<% if concert.is_in_club? %>
+			<div class="concert_club">
+				<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+			</div>
+		<% end %>
+	
+		<% if concert.price %>
+			<div class="concert_price">
+				<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+			</div>
+		<% end %>
+	</div>
+	<b class="b4bh"></b><b class="b3bh"></b><b class="b2bh"></b><b class="b1h"></b><br><br><br>
 </div>
 <% end %>
-<br><br>v budoucnu:___________________________________________<br><br>
+
 <% for concert in @concerts_future%>
-<div class="concert">
-
-	<% if is_admin %>
-		<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
-	<% end %>
-
-	<div class="concert_name">
-		<h3><%=h concert.name%></h3>
+<div class="concert_future">
+	<b class="b1h_green"></b><b class="b2h_green"></b><b class="b3h_green"></b><b class="b4h_green"></b>
+	<div class="headh_green">
+		<h3 class="concert_name"><%=h concert.name%></h3>
+		<% if is_admin %>
+			<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
+		<% end %>
 	</div>
-	<div class="concert_time">
-		<%=h concert.date_str%>, <%=h concert.time_range_str%>
-	</div>
-	<div class="concert_info">
-		<%=h concert.info%>
-	</div>
-	
-	<% if concert.is_in_club? %>
-		<div class="concert_club">
-			<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+	<div class="contenth">
+		<div class="concert_time">
+			<%=h concert.date_str%>, <%=h concert.time_range_str%>
 		</div>
-	<% end %>
-	
-	<% if concert.price %>
-		<div class="concert_price">
-			<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+		<div class="concert_info">
+			<%=h concert.info%>
 		</div>
-	<% end %>
+	
+		<% if concert.is_in_club? %>
+			<div class="concert_club">
+				<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+			</div>
+		<% end %>
+	
+		<% if concert.price %>
+			<div class="concert_price">
+				<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+			</div>
+		<% end %>
+	</div>
+	<b class="b4bh"></b><b class="b3bh"></b><b class="b2bh"></b><b class="b1h"></b><br><br><br>
 </div>
 <% end %>
-<br><br>minulost:___________________________________________<br><br>
+
 <% for concert in @concerts_past%>
-<div class="concert">
-
-	<% if is_admin %>
-		<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
-	<% end %>
-
-	<div class="concert_name">
-		<h3><%=h concert.name%></h3>
+<div class="concert_past">
+	<b class="b1h_grey"></b><b class="b2h_grey"></b><b class="b3h_grey"></b><b class="b4h_grey"></b>
+	<div class="headh_grey">
+		<h3 class="concert_name"><%=h concert.name%></h3>
+		<% if is_admin %>
+			<div><%= link_to 'Edit', edit_concert_path(concert), :class => "admin" %> <%= link_to "Smazat", concert_path(concert), :method => "delete", :class => "admin"  %></div>
+		<% end %>
 	</div>
-	<div class="concert_time">
-		<%=h concert.date_str%>, <%=h concert.time_range_str%>
-	</div>
-	<div class="concert_info">
-		<%=h concert.info%>
-	</div>
-	
-	<% if concert.is_in_club? %>
-		<div class="concert_club">
-			<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+	<div class="contenth">
+		<div class="concert_time">
+			<%=h concert.date_str%>, <%=h concert.time_range_str%>
 		</div>
-	<% end %>
-	
-	<% if concert.price %>
-		<div class="concert_price">
-			<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+		<div class="concert_info">
+			<%=h concert.info%>
 		</div>
-	<% end %>
+	
+		<% if concert.is_in_club? %>
+			<div class="concert_club">
+				<%=h concert.club_name%> <%= link_to "Detail Místa", club_path(concert.club.id) %>
+			</div>
+		<% end %>
+	
+		<% if concert.price %>
+			<div class="concert_price">
+				<%= number_to_currency(concert.price, :unit => "Kč", :separator => ",", :delimiter => "", :format => "%n %u")%>
+			</div>
+		<% end %>
+	</div>
+	<b class="b4bh"></b><b class="b3bh"></b><b class="b2bh"></b><b class="b1h"></b><br><br><br>
 </div>
 <% end %>
-
-<br><br>___________________________________________<br><br>
 
 

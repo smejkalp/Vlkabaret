@@ -124,9 +124,19 @@ div.news{
 div.user{
 	margin-bottom: 20px;
 }
-div.concert{
-	margin-bottom: 50px;
+div.concert_today{
+	margin-bottom: 30px;
+	margin-left: 10px;
 }
+div.concert_future{
+	margin-bottom: 30px;
+	margin-left: 10px;
+}
+div.concert_past{
+	margin-bottom: 30px;
+	margin-left: 10px;
+}
+
 div.concert_name{
 /*	font-weight: bold;
 	margin-bottom: 5px;
@@ -223,3 +233,46 @@ ul.actors{
 	padding:0px;
 	padding-left: 15px;
 }
+
+
+h3.concert_name{
+	margin: 0px;
+	padding:3px;
+	padding-bottom: 5px;
+}
+
+
+/*rounded corners*/
+.b1h, .b2h, .b3h, .b4h, .b2bh, .b3bh, .b4bh{font-size:1px; overflow:hidden; display:block;}
+.b1h {height:1px; background:#555555; margin:0 5px;}
+.b2h, .b2bh {height:1px; background:#111111; border-right:2px solid #555555; border-left:2px solid #555555; margin:0 3px;}
+.b3h, .b3bh {height:1px; background:#111111; border-right:1px solid #555555; border-left:1px solid #555555; margin:0 2px;}
+.b4h, .b4bh {height:2px; background:#111111; border-right:1px solid #555555; border-left:1px solid #555555; margin:0 1px;}
+.b2bh, .b3bh, .b4bh {background: #111111;}
+.headh {background: #555555; border-right:1px solid #555555; border-left:1px solid #555555;}
+.headh h3 {margin: 0px 10px 0px 10px; padding-bottom: 3px;}
+.contenth {background: #111111; border-right:1px solid #555555; border-left:1px solid #555555;}
+.contenth div {margin-left: 12px; padding-top: 5px;}
+
+
+.b1h_green, .b2h_green, .b3h_green, .b4h_green, .b2bh_green, .b3bh_green, .b4bh_green{font-size:1px; overflow:hidden; display:block;}
+.headh_green {background: #559955; border-right:1px solid #559955; border-left:1px solid #559955;}
+.b1h_green {height:1px; background:#559955; margin:0 5px;}
+.b2h_green {height:1px; background:#559955; border-right:2px solid #559955; border-left:2px solid #559955; margin:0 3px;}
+.b3h_green {height:1px; background:#559955; border-right:1px solid #559955; border-left:1px solid #559955; margin:0 2px;}
+.b4h_green {height:2px; background:#559955; border-right:1px solid #559955; border-left:1px solid #559955; margin:0 1px;}
+
+
+.b1h_grey, .b2h_grey, .b3h_grey, .b4h_grey, .b2bh_grey, .b3bh_grey, .b4bh_grey{font-size:1px; overflow:hidden; display:block;}
+.headh_grey {background: #555555; border-right:1px solid #555555; border-left:1px solid #555555;}
+.b1h_grey {height:1px; background:#555555; margin:0 5px;}
+.b2h_grey {height:1px; background:#555555; border-right:2px solid #555555; border-left:2px solid #555555; margin:0 3px;}
+.b3h_grey {height:1px; background:#555555; border-right:1px solid #555555; border-left:1px solid #555555; margin:0 2px;}
+.b4h_grey {height:2px; background:#555555; border-right:1px solid #555555; border-left:1px solid #555555; margin:0 1px;}
+
+.b1h_red, .b2h_red, .b3h_red, .b4h_red, .b2bh_red, .b3bh_red, .b4bh_red{font-size:1px; overflow:hidden; display:block;}
+.headh_red {background: #DD4433; border-right:1px solid #DD4433; border-left:1px solid #DD4433;}
+.b1h_red {height:1px; background:#DD4433; margin:0 5px;}
+.b2h_red {height:1px; background:#DD4433; border-right:2px solid #DD4433; border-left:2px solid #DD4433; margin:0 3px;}
+.b3h_red {height:1px; background:#DD4433; border-right:1px solid #DD4433; border-left:1px solid #DD4433; margin:0 2px;}
+.b4h_red {height:2px; background:#DD4433; border-right:1px solid #DD4433; border-left:1px solid #DD4433; margin:0 1px;}
