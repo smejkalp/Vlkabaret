@@ -15,10 +15,10 @@
 <%= f.text_field :date, :onfocus => "showCalendarControl(this);" %><br>
 <br>
 <%= f.label :start_time, "Začátek" %><br>
-<%= f.text_field :start_time %><br>
+<%= time_select("concert","start_time")%><br>
 <br>
 <%= f.label :end_time, "Konec" %><br>
-<%= f.text_field :end_time %><br>
+<%= time_select("concert","end_time")%><br>
 <br>
 <%= f.submit "Uložit", :disable_with => 'Ukládám...' %>
 <% end -%>
